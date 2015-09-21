@@ -25,10 +25,12 @@ public class Samus : MonoBehaviour {
     public GameObject bulletPrefab;
     public Transform bulletOrigin, bulletOriginUp;
     public float speedBullet = 10f;
-	public bool hasMorph = true;
+	public bool hasMorph = false;
 	public bool isMorph = false;
 	public bool canUnmorph = true;
     public bool ____________;
+
+	static public Samus S;
 
     //These are variables set on Start()
     public Rigidbody rigid;
@@ -41,6 +43,10 @@ public class Samus : MonoBehaviour {
 
     RigidbodyConstraints noRotZ, noRotYZ;
     Quaternion turnLeft = Quaternion.Euler(0, 180, 0);
+
+	void Awake() {
+		S = this;
+	}
 
     // Use this for initialization
 	void Start () {

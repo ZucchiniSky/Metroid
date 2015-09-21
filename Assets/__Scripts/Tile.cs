@@ -51,24 +51,19 @@ public class Tile : MonoBehaviour {
             sprend.sprite = spriteArray[tileNum];
             sprend.enabled = true;
 
-            bc.enabled = true;
-        } else
-        {
-            // this tile is used to spawn an enemy
+			bc.enabled = true;
+			
+			if (ShowMapOnCamera.S != null)
+			{
+				SetCollider();
+				destructibility = ShowMapOnCamera.S.destructibleS[tileNum];
+			}
+		} else
+		{
+			// this tile is used to spawn an enemy
             sprend.enabled = false;
 
             bc.enabled = false;
-
-            if (tileNum == 999)
-            {
-                Instantiate(zoomerYellowPrefab, transform.position, Quaternion.identity);
-            }
-        }
-
-        if (ShowMapOnCamera.S != null)
-        {
-            SetCollider();
-            destructibility = ShowMapOnCamera.S.destructibleS[tileNum];
         }
 
         gameObject.SetActive(true);

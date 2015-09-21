@@ -24,6 +24,9 @@ public class ShowMapOnCamera : MonoBehaviour {
     public TextAsset        destructibleData;
     public GameObject       tilePrefab;
     public Vector2[]        stopPoints;
+
+	public GameObject morphBallPowerupPrefab;
+
     public bool             ________________;
     public int              w, h;
     public string           collisionS, destructibleS;
@@ -122,27 +125,33 @@ public class ShowMapOnCamera : MonoBehaviour {
                 } else {                                // On-Screen Tile
                     tileNum = MAP[i,j];
                     
-                    if (tileNum == 0 || tileNum > 900) { // Empty space
+                    if (tileNum == 0) { // Empty space
                         if (MAP_TILES[i,j] != null) {
                             PushTile( MAP_TILES[i,j] );
-                        }
-                        if (tileNum > 900)
-                        {
-
                         }
                     } else {
                         if (MAP_TILES[i,j] == null) {
                             t = GetTile();
-                            t.SetTile(i,j);
-                        }
-                    }
-                }
-            }
-        }
-
-
-    }
-
+							t.SetTile(i,j);
+							if (tileNum > 900)
+							{
+								GameObject go;
+								if (tileNum == 950)
+								{
+									go = Instantiate(morphBallPowerupPrefab);
+									go.transform.SetParent(mapAnchor, true);
+									go.transform.localPosition = new Vector3(i, j, 0);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		
+	}
+	
 
 
 	static public Tile GetTile() {
