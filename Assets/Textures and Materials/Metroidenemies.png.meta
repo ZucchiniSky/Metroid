@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: ce94f51f558bd47eca28c0601d6aa21e
-timeCreated: 1442811139
+guid: 6ba5473dcb3817a41bfdd3d2245d2de6
+timeCreated: 1442808914
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: metroid_samusaran_sheet_0
-    21300002: metroid_samusaran_sheet_1
-    21300004: metroid_samusaran_sheet_2
-    21300006: metroid_samusaran_sheet_3
+    21300000: zoomer_red
+    21300002: zoomer_yellow
+    21300004: skree
+    21300006: ripper
+    21300008: reo_descent
+    21300010: reo_ascent
+    21300012: zeb
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -34,13 +37,13 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: 0
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
-  compressionQuality: 100
+  compressionQuality: 50
   allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
@@ -54,43 +57,73 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: metroid_samusaran_sheet_0
+    - name: zoomer_red
       rect:
         serializedVersion: 2
-        x: 202
-        y: 1193
-        width: 21
-        height: 34
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: metroid_samusaran_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 1150
+        x: 28
+        y: 307
         width: 16
-        height: 40
+        height: 15
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: metroid_samusaran_sheet_2
+    - name: zoomer_yellow
       rect:
         serializedVersion: 2
-        x: 250
-        y: 1287
-        width: 6
-        height: 7
+        x: 28
+        y: 289
+        width: 16
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: skree
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 251
+        width: 16
+        height: 24
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ripper
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 232
+        width: 16
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: reo_descent
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 174
+        width: 25
+        height: 19
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: metroid_samusaran_sheet_3
+    - name: reo_ascent
       rect:
         serializedVersion: 2
-        x: 141
-        y: 1123
-        width: 14
-        height: 15
+        x: 27
+        y: 174
+        width: 24
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: zeb
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 121
+        width: 16
+        height: 16
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
