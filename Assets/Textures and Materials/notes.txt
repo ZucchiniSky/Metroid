@@ -8,6 +8,9 @@ enemies:
 905 - reo
 906 - zeb
 
+powerups:
+950 - morph ball
+
 Destructible:
 
 doors:
