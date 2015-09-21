@@ -2,161 +2,61 @@ using UnityEngine;
 using System.Collections;
 
 public class Tile : MonoBehaviour {
-    public GameObject zoomerYellowPrefab;
+    static Sprite[]         spriteArray;
 
-    public bool ______________________;
+    public Texture2D        spriteTexture;
+	public int				x, y;
+	public int				tileNum;
+	private BoxCollider		bc;
+    private Material        mat;
 
-    static Sprite[] spriteArray;
+    private SpriteRenderer  sprend;
 
-    public Texture2D spriteTexture;
-    public int x, y;
-    public int tileNum;
-    private BoxCollider bc;
-    private Material mat;
-
-    private SpriteRenderer sprend;
-
-    private char destructibility;
-
-    void Awake() {
+	void Awake() {
         if (spriteArray == null) {
             spriteArray = Resources.LoadAll<Sprite>(spriteTexture.name);
         }
 
-        bc = GetComponent<BoxCollider>();
+		bc = GetComponent<BoxCollider>();
 
         sprend = GetComponent<SpriteRenderer>();
         //Renderer rend = gameObject.GetComponent<Renderer>();
         //mat = rend.material;
-    }
+	}
 
-    public void SetTile(int eX, int eY, int eTileNum = -1) {
-        if (x == eX && y == eY) return; // Don't move this if you don't have to. - JB
+	public void SetTile(int eX, int eY, int eTileNum = -1) {
+		if (x == eX && y == eY) return; // Don't move this if you don't have to. - JB
 
-        x = eX;
-        y = eY;
-        transform.localPosition = new Vector3(x, y, 0);
-        gameObject.name = x.ToString("D3") + "x" + y.ToString("D3");
+		x = eX;
+		y = eY;
+		transform.localPosition = new Vector3(x, y, 0);
+        gameObject.name = x.ToString("D3")+"x"+y.ToString("D3");
 
-        tileNum = eTileNum;
-        if (tileNum == -1 && ShowMapOnCamera.S != null) {
-            tileNum = ShowMapOnCamera.MAP[x, y];
-            if (tileNum == 0) {
-                ShowMapOnCamera.PushTile(this);
-            }
-        }
+		tileNum = eTileNum;
+		if (tileNum == -1 && ShowMapOnCamera.S != null) {
+			tileNum = ShowMapOnCamera.MAP[x,y];
+			if (tileNum == 0) {
+				ShowMapOnCamera.PushTile(this);
+			}
+		}
 
-        if (tileNum >= 0 && tileNum <= spriteArray.Length)
-        {
-            sprend.sprite = spriteArray[tileNum];
-            sprend.enabled = true;
+        sprend.sprite = spriteArray[tileNum];
 
-            bc.enabled = true;
-        } else
-        {
-            // this tile is used to spawn an enemy
-            sprend.enabled = false;
-
-            bc.enabled = false;
-
-            switch (tileNum)
-            {
-                case 999:
-                    Instantiate(zoomerYellowPrefab, transform.position, Quaternion.identity);
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        if (ShowMapOnCamera.S != null)
-        {
-            SetCollider();
-            destructibility = ShowMapOnCamera.S.destructibleS[tileNum];
-        }
+		if (ShowMapOnCamera.S != null) SetCollider();
+        //TODO: Add something for destructibility - JB
 
         gameObject.SetActive(true);
-        if (ShowMapOnCamera.S != null) {
-            if (ShowMapOnCamera.MAP_TILES[x, y] != null) {
-                if (ShowMapOnCamera.MAP_TILES[x, y] != this) {
-                    ShowMapOnCamera.PushTile(ShowMapOnCamera.MAP_TILES[x, y]);
-                }
-            } else {
-                ShowMapOnCamera.MAP_TILES[x, y] = this;
-            }
-        }
-    }
+		if (ShowMapOnCamera.S != null) {
+			if (ShowMapOnCamera.MAP_TILES[x,y] != null) {
+				if (ShowMapOnCamera.MAP_TILES[x,y] != this) {
+					ShowMapOnCamera.PushTile( ShowMapOnCamera.MAP_TILES[x,y] );
+				}
+			} else {
+				ShowMapOnCamera.MAP_TILES[x,y] = this;
+			}
+		}
+	}
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (ShowMapOnCamera.S == null) return;
-
-        if (other.gameObject.tag == "Bullet")
-        {
-            if (destructibility >= '3' && destructibility <= '8')
-            {
-                // this tile represents a door;
-                GameObject[] doorTiles = new GameObject[6];
-                if (destructibility == '3')
-                {
-                    doorTiles[0] = gameObject;
-                    doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y + 1].gameObject;
-                    doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 2].gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x + 3, y].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y + 1].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y + 2].gameObject;
-                }
-                else if (destructibility == '4')
-                {
-                    doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;
-                    doorTiles[1] = gameObject;
-                    doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 1].gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x + 3, y - 1].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y + 1].gameObject;
-                }
-                else if (destructibility == '5')
-                {
-                    doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 2].gameObject;
-                    doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;
-                    doorTiles[2] = gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x + 3, y - 2].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y - 1].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y].gameObject;
-                }
-                else if (destructibility == '6')
-                {
-                    doorTiles[0] = gameObject;
-                    doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y + 1].gameObject;
-                    doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 2].gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x - 3, y].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x - 3, y + 1].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x - 3, y + 2].gameObject;
-                } else if (destructibility == '7')
-                {
-                    doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;
-                    doorTiles[1] = gameObject;
-                    doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 1].gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x - 3, y - 1].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x - 3, y].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x - 3, y + 1].gameObject;
-                } else if (destructibility == '8')
-                {
-                    doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 2].gameObject;
-                    doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;
-                    doorTiles[2] = gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x - 3, y - 2].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x - 3, y - 1].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x - 3, y].gameObject;
-                }
-                foreach (GameObject i in doorTiles)
-                {
-                    i.GetComponent<BoxCollider>().enabled = false;
-                    i.GetComponent<SpriteRenderer>().enabled = false;
-                }
-            }
-        }
-    }
 
 	// Arrange the collider for this tile
 	void SetCollider() {
