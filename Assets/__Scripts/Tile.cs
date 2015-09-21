@@ -59,13 +59,9 @@ public class Tile : MonoBehaviour {
 
             bc.enabled = false;
 
-            switch (tileNum)
+            if (tileNum == 999)
             {
-                case 999:
-                    Instantiate(zoomerYellowPrefab, transform.position, Quaternion.identity);
-                    break;
-                default:
-                    break;
+                Instantiate(zoomerYellowPrefab, transform.position, Quaternion.identity);
             }
         }
 

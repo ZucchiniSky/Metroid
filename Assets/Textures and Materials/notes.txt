@@ -1,12 +1,12 @@
 MetroidFullMapData:
 
 enemies:
-999 - zoomer yellow
-998 - zoomer red
-997 - skree
-996 - ripper
-995 - reo
-995 - zeb
+901 - zoomer yellow
+902 - zoomer red
+903 - skree
+904 - ripper
+905 - reo
+906 - zeb
 
 Destructible:
 

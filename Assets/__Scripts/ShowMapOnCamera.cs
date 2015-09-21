@@ -122,9 +122,13 @@ public class ShowMapOnCamera : MonoBehaviour {
                 } else {                                // On-Screen Tile
                     tileNum = MAP[i,j];
                     
-                    if (tileNum == 0) { // Empty space
+                    if (tileNum == 0 || tileNum > 900) { // Empty space
                         if (MAP_TILES[i,j] != null) {
                             PushTile( MAP_TILES[i,j] );
+                        }
+                        if (tileNum > 900)
+                        {
+
                         }
                     } else {
                         if (MAP_TILES[i,j] == null) {

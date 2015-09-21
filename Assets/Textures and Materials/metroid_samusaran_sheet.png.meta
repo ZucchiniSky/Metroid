@@ -1,11 +1,351 @@
 fileFormatVersion: 2
 guid: ce94f51f558bd47eca28c0601d6aa21e
+timeCreated: 1442811234
+licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: metroid_samusaran_sheet_0
+    21300002: metroid_samusaran_sheet_1
+    21300004: metroid_samusaran_sheet_2
+    21300006: metroid_samusaran_sheet_3
+    21300008: metroid_samusaran_sheet_4
+    21300010: metroid_samusaran_sheet_5
+    21300012: metroid_samusaran_sheet_6
+    21300014: metroid_samusaran_sheet_7
+    21300016: metroid_samusaran_sheet_8
+    21300018: metroid_samusaran_sheet_9
+    21300020: metroid_samusaran_sheet_10
+    21300022: metroid_samusaran_sheet_11
+    21300024: metroid_samusaran_sheet_12
+    21300026: metroid_samusaran_sheet_13
+    21300028: metroid_samusaran_sheet_14
+    21300030: metroid_samusaran_sheet_15
+    21300032: metroid_samusaran_sheet_16
+    21300034: metroid_samusaran_sheet_17
+    21300036: metroid_samusaran_sheet_18
+    21300038: metroid_samusaran_sheet_19
+    21300040: metroid_samusaran_sheet_20
+    21300042: metroid_samusaran_sheet_21
+    21300044: metroid_samusaran_sheet_22
+    21300046: metroid_samusaran_sheet_23
+    21300048: metroid_samusaran_sheet_24
+    21300050: metroid_samusaran_sheet_25
+    21300052: metroid_samusaran_sheet_26
+    21300054: metroid_samusaran_sheet_27
+    21300056: metroid_samusaran_sheet_28
+    21300058: metroid_samusaran_sheet_29
+    21300060: metroid_samusaran_sheet_30
+    21300062: metroid_samusaran_sheet_31
+    21300064: metroid_samusaran_sheet_32
+    21300066: metroid_samusaran_sheet_33
+    21300068: metroid_samusaran_sheet_34
+    21300070: metroid_samusaran_sheet_35
+    21300072: metroid_samusaran_sheet_36
+    21300074: metroid_samusaran_sheet_37
+    21300076: metroid_samusaran_sheet_38
+    21300078: metroid_samusaran_sheet_39
+    21300080: metroid_samusaran_sheet_40
+    21300082: metroid_samusaran_sheet_41
+    21300084: metroid_samusaran_sheet_42
+    21300086: metroid_samusaran_sheet_43
+    21300088: metroid_samusaran_sheet_44
+    21300090: metroid_samusaran_sheet_45
+    21300092: metroid_samusaran_sheet_46
+    21300094: metroid_samusaran_sheet_47
+    21300096: metroid_samusaran_sheet_48
+    21300098: metroid_samusaran_sheet_49
+    21300100: metroid_samusaran_sheet_50
+    21300102: metroid_samusaran_sheet_51
+    21300104: metroid_samusaran_sheet_52
+    21300106: metroid_samusaran_sheet_53
+    21300108: metroid_samusaran_sheet_54
+    21300110: metroid_samusaran_sheet_55
+    21300112: metroid_samusaran_sheet_56
+    21300114: metroid_samusaran_sheet_57
+    21300116: metroid_samusaran_sheet_58
+    21300118: metroid_samusaran_sheet_59
+    21300120: metroid_samusaran_sheet_60
+    21300122: metroid_samusaran_sheet_61
+    21300124: metroid_samusaran_sheet_62
+    21300126: metroid_samusaran_sheet_63
+    21300128: metroid_samusaran_sheet_64
+    21300130: metroid_samusaran_sheet_65
+    21300132: metroid_samusaran_sheet_66
+    21300134: metroid_samusaran_sheet_67
+    21300136: metroid_samusaran_sheet_68
+    21300138: metroid_samusaran_sheet_69
+    21300140: metroid_samusaran_sheet_70
+    21300142: metroid_samusaran_sheet_71
+    21300144: metroid_samusaran_sheet_72
+    21300146: metroid_samusaran_sheet_73
+    21300148: metroid_samusaran_sheet_74
+    21300150: metroid_samusaran_sheet_75
+    21300152: metroid_samusaran_sheet_76
+    21300154: metroid_samusaran_sheet_77
+    21300156: metroid_samusaran_sheet_78
+    21300158: metroid_samusaran_sheet_79
+    21300160: metroid_samusaran_sheet_80
+    21300162: metroid_samusaran_sheet_81
+    21300164: metroid_samusaran_sheet_82
+    21300166: metroid_samusaran_sheet_83
+    21300168: metroid_samusaran_sheet_84
+    21300170: metroid_samusaran_sheet_85
+    21300172: metroid_samusaran_sheet_86
+    21300174: metroid_samusaran_sheet_87
+    21300176: metroid_samusaran_sheet_88
+    21300178: metroid_samusaran_sheet_89
+    21300180: metroid_samusaran_sheet_90
+    21300182: metroid_samusaran_sheet_91
+    21300184: metroid_samusaran_sheet_92
+    21300186: metroid_samusaran_sheet_93
+    21300188: metroid_samusaran_sheet_94
+    21300190: metroid_samusaran_sheet_95
+    21300192: metroid_samusaran_sheet_96
+    21300194: metroid_samusaran_sheet_97
+    21300196: metroid_samusaran_sheet_98
+    21300198: metroid_samusaran_sheet_99
+    21300200: metroid_samusaran_sheet_100
+    21300202: metroid_samusaran_sheet_101
+    21300204: metroid_samusaran_sheet_102
+    21300206: metroid_samusaran_sheet_103
+    21300208: metroid_samusaran_sheet_104
+    21300210: metroid_samusaran_sheet_105
+    21300212: metroid_samusaran_sheet_106
+    21300214: metroid_samusaran_sheet_107
+    21300216: metroid_samusaran_sheet_108
+    21300218: metroid_samusaran_sheet_109
+    21300220: metroid_samusaran_sheet_110
+    21300222: metroid_samusaran_sheet_111
+    21300224: metroid_samusaran_sheet_112
+    21300226: metroid_samusaran_sheet_113
+    21300228: metroid_samusaran_sheet_114
+    21300230: metroid_samusaran_sheet_115
+    21300232: metroid_samusaran_sheet_116
+    21300234: metroid_samusaran_sheet_117
+    21300236: metroid_samusaran_sheet_118
+    21300238: metroid_samusaran_sheet_119
+    21300240: metroid_samusaran_sheet_120
+    21300242: metroid_samusaran_sheet_121
+    21300244: metroid_samusaran_sheet_122
+    21300246: metroid_samusaran_sheet_123
+    21300248: metroid_samusaran_sheet_124
+    21300250: metroid_samusaran_sheet_125
+    21300252: metroid_samusaran_sheet_126
+    21300254: metroid_samusaran_sheet_127
+    21300256: metroid_samusaran_sheet_128
+    21300258: metroid_samusaran_sheet_129
+    21300260: metroid_samusaran_sheet_130
+    21300262: metroid_samusaran_sheet_131
+    21300264: metroid_samusaran_sheet_132
+    21300266: metroid_samusaran_sheet_133
+    21300268: metroid_samusaran_sheet_134
+    21300270: metroid_samusaran_sheet_135
+    21300272: metroid_samusaran_sheet_136
+    21300274: metroid_samusaran_sheet_137
+    21300276: metroid_samusaran_sheet_138
+    21300278: metroid_samusaran_sheet_139
+    21300280: metroid_samusaran_sheet_140
+    21300282: metroid_samusaran_sheet_141
+    21300284: metroid_samusaran_sheet_142
+    21300286: metroid_samusaran_sheet_143
+    21300288: metroid_samusaran_sheet_144
+    21300290: metroid_samusaran_sheet_145
+    21300292: metroid_samusaran_sheet_146
+    21300294: metroid_samusaran_sheet_147
+    21300296: metroid_samusaran_sheet_148
+    21300298: metroid_samusaran_sheet_149
+    21300300: metroid_samusaran_sheet_150
+    21300302: metroid_samusaran_sheet_151
+    21300304: metroid_samusaran_sheet_152
+    21300306: metroid_samusaran_sheet_153
+    21300308: metroid_samusaran_sheet_154
+    21300310: metroid_samusaran_sheet_155
+    21300312: metroid_samusaran_sheet_156
+    21300314: metroid_samusaran_sheet_157
+    21300316: metroid_samusaran_sheet_158
+    21300318: metroid_samusaran_sheet_159
+    21300320: metroid_samusaran_sheet_160
+    21300322: metroid_samusaran_sheet_161
+    21300324: metroid_samusaran_sheet_162
+    21300326: metroid_samusaran_sheet_163
+    21300328: metroid_samusaran_sheet_164
+    21300330: metroid_samusaran_sheet_165
+    21300332: metroid_samusaran_sheet_166
+    21300334: metroid_samusaran_sheet_167
+    21300336: metroid_samusaran_sheet_168
+    21300338: metroid_samusaran_sheet_169
+    21300340: metroid_samusaran_sheet_170
+    21300342: metroid_samusaran_sheet_171
+    21300344: metroid_samusaran_sheet_172
+    21300346: metroid_samusaran_sheet_173
+    21300348: metroid_samusaran_sheet_174
+    21300350: metroid_samusaran_sheet_175
+    21300352: metroid_samusaran_sheet_176
+    21300354: metroid_samusaran_sheet_177
+    21300356: metroid_samusaran_sheet_178
+    21300358: metroid_samusaran_sheet_179
+    21300360: metroid_samusaran_sheet_180
+    21300362: metroid_samusaran_sheet_181
+    21300364: metroid_samusaran_sheet_182
+    21300366: metroid_samusaran_sheet_183
+    21300368: metroid_samusaran_sheet_184
+    21300370: metroid_samusaran_sheet_185
+    21300372: metroid_samusaran_sheet_186
+    21300374: metroid_samusaran_sheet_187
+    21300376: metroid_samusaran_sheet_188
+    21300378: metroid_samusaran_sheet_189
+    21300380: metroid_samusaran_sheet_190
+    21300382: metroid_samusaran_sheet_191
+    21300384: metroid_samusaran_sheet_192
+    21300386: metroid_samusaran_sheet_193
+    21300388: metroid_samusaran_sheet_194
+    21300390: metroid_samusaran_sheet_195
+    21300392: metroid_samusaran_sheet_196
+    21300394: metroid_samusaran_sheet_197
+    21300396: metroid_samusaran_sheet_198
+    21300398: metroid_samusaran_sheet_199
+    21300400: metroid_samusaran_sheet_200
+    21300402: metroid_samusaran_sheet_201
+    21300404: metroid_samusaran_sheet_202
+    21300406: metroid_samusaran_sheet_203
+    21300408: metroid_samusaran_sheet_204
+    21300410: metroid_samusaran_sheet_205
+    21300412: metroid_samusaran_sheet_206
+    21300414: metroid_samusaran_sheet_207
+    21300416: metroid_samusaran_sheet_208
+    21300418: metroid_samusaran_sheet_209
+    21300420: metroid_samusaran_sheet_210
+    21300422: metroid_samusaran_sheet_211
+    21300424: metroid_samusaran_sheet_212
+    21300426: metroid_samusaran_sheet_213
+    21300428: metroid_samusaran_sheet_214
+    21300430: metroid_samusaran_sheet_215
+    21300432: metroid_samusaran_sheet_216
+    21300434: metroid_samusaran_sheet_217
+    21300436: metroid_samusaran_sheet_218
+    21300438: metroid_samusaran_sheet_219
+    21300440: metroid_samusaran_sheet_220
+    21300442: metroid_samusaran_sheet_221
+    21300444: metroid_samusaran_sheet_222
+    21300446: metroid_samusaran_sheet_223
+    21300448: metroid_samusaran_sheet_224
+    21300450: metroid_samusaran_sheet_225
+    21300452: metroid_samusaran_sheet_226
+    21300454: metroid_samusaran_sheet_227
+    21300456: metroid_samusaran_sheet_228
+    21300458: metroid_samusaran_sheet_229
+    21300460: metroid_samusaran_sheet_230
+    21300462: metroid_samusaran_sheet_231
+    21300464: metroid_samusaran_sheet_232
+    21300466: metroid_samusaran_sheet_233
+    21300468: metroid_samusaran_sheet_234
+    21300470: metroid_samusaran_sheet_235
+    21300472: metroid_samusaran_sheet_236
+    21300474: metroid_samusaran_sheet_237
+    21300476: metroid_samusaran_sheet_238
+    21300478: metroid_samusaran_sheet_239
+    21300480: metroid_samusaran_sheet_240
+    21300482: metroid_samusaran_sheet_241
+    21300484: metroid_samusaran_sheet_242
+    21300486: metroid_samusaran_sheet_243
+    21300488: metroid_samusaran_sheet_244
+    21300490: metroid_samusaran_sheet_245
+    21300492: metroid_samusaran_sheet_246
+    21300494: metroid_samusaran_sheet_247
+    21300496: metroid_samusaran_sheet_248
+    21300498: metroid_samusaran_sheet_249
+    21300500: metroid_samusaran_sheet_250
+    21300502: metroid_samusaran_sheet_251
+    21300504: metroid_samusaran_sheet_252
+    21300506: metroid_samusaran_sheet_253
+    21300508: metroid_samusaran_sheet_254
+    21300510: metroid_samusaran_sheet_255
+    21300512: metroid_samusaran_sheet_256
+    21300514: metroid_samusaran_sheet_257
+    21300516: metroid_samusaran_sheet_258
+    21300518: metroid_samusaran_sheet_259
+    21300520: metroid_samusaran_sheet_260
+    21300522: metroid_samusaran_sheet_261
+    21300524: metroid_samusaran_sheet_262
+    21300526: metroid_samusaran_sheet_263
+    21300528: metroid_samusaran_sheet_264
+    21300530: metroid_samusaran_sheet_265
+    21300532: metroid_samusaran_sheet_266
+    21300534: metroid_samusaran_sheet_267
+    21300536: metroid_samusaran_sheet_268
+    21300538: metroid_samusaran_sheet_269
+    21300540: metroid_samusaran_sheet_270
+    21300542: metroid_samusaran_sheet_271
+    21300544: metroid_samusaran_sheet_272
+    21300546: metroid_samusaran_sheet_273
+    21300548: metroid_samusaran_sheet_274
+    21300550: metroid_samusaran_sheet_275
+    21300552: metroid_samusaran_sheet_276
+    21300554: metroid_samusaran_sheet_277
+    21300556: metroid_samusaran_sheet_278
+    21300558: metroid_samusaran_sheet_279
+    21300560: metroid_samusaran_sheet_280
+    21300562: metroid_samusaran_sheet_281
+    21300564: metroid_samusaran_sheet_282
+    21300566: metroid_samusaran_sheet_283
+    21300568: metroid_samusaran_sheet_284
+    21300570: metroid_samusaran_sheet_285
+    21300572: metroid_samusaran_sheet_286
+    21300574: metroid_samusaran_sheet_287
+    21300576: metroid_samusaran_sheet_288
+    21300578: metroid_samusaran_sheet_289
+    21300580: metroid_samusaran_sheet_290
+    21300582: metroid_samusaran_sheet_291
+    21300584: metroid_samusaran_sheet_292
+    21300586: metroid_samusaran_sheet_293
+    21300588: metroid_samusaran_sheet_294
+    21300590: metroid_samusaran_sheet_295
+    21300592: metroid_samusaran_sheet_296
+    21300594: metroid_samusaran_sheet_297
+    21300596: metroid_samusaran_sheet_298
+    21300598: metroid_samusaran_sheet_299
+    21300600: metroid_samusaran_sheet_300
+    21300602: metroid_samusaran_sheet_301
+    21300604: metroid_samusaran_sheet_302
+    21300606: metroid_samusaran_sheet_303
+    21300608: metroid_samusaran_sheet_304
+    21300610: metroid_samusaran_sheet_305
+    21300612: metroid_samusaran_sheet_306
+    21300614: metroid_samusaran_sheet_307
+    21300616: metroid_samusaran_sheet_308
+    21300618: metroid_samusaran_sheet_309
+    21300620: metroid_samusaran_sheet_310
+    21300622: metroid_samusaran_sheet_311
+    21300624: metroid_samusaran_sheet_312
+    21300626: metroid_samusaran_sheet_313
+    21300628: metroid_samusaran_sheet_314
+    21300630: metroid_samusaran_sheet_315
+    21300632: metroid_samusaran_sheet_316
+    21300634: metroid_samusaran_sheet_317
+    21300636: metroid_samusaran_sheet_318
+    21300638: metroid_samusaran_sheet_319
+    21300640: metroid_samusaran_sheet_320
+    21300642: metroid_samusaran_sheet_321
+    21300644: metroid_samusaran_sheet_322
+    21300646: metroid_samusaran_sheet_323
+    21300648: metroid_samusaran_sheet_324
+    21300650: metroid_samusaran_sheet_325
+    21300652: metroid_samusaran_sheet_326
+    21300654: metroid_samusaran_sheet_327
+    21300656: metroid_samusaran_sheet_328
+    21300658: metroid_samusaran_sheet_329
+    21300660: metroid_samusaran_sheet_330
+    21300662: metroid_samusaran_sheet_331
+    21300664: metroid_samusaran_sheet_332
+    21300666: metroid_samusaran_sheet_333
+    21300668: metroid_samusaran_sheet_334
+    21300670: metroid_samusaran_sheet_335
+    21300672: metroid_samusaran_sheet_336
+    21300674: metroid_samusaran_sheet_337
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -27,27 +367,3407 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
-  compressionQuality: 50
+  compressionQuality: 100
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: metroid_samusaran_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1277
+        width: 25
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1283
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1283
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1283
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1283
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1285
+        width: 13
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1287
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1287
+        width: 6
+        height: 7
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1285
+        width: 10
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1285
+        width: 10
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1237
+        width: 20
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1233
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1233
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1234
+        width: 17
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1233
+        width: 18
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1234
+        width: 17
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1233
+        width: 19
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1233
+        width: 22
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1237
+        width: 20
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1197
+        width: 25
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1194
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1194
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1194
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1193
+        width: 21
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1193
+        width: 21
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1194
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1194
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1194
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1197
+        width: 25
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1153
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1150
+        width: 21
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1150
+        width: 19
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1150
+        width: 14
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1150
+        width: 16
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1150
+        width: 16
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1150
+        width: 14
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1150
+        width: 19
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1150
+        width: 21
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1153
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1118
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1122
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1118
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1122
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1123
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1123
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1123
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1123
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1122
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1118
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1122
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1118
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1077
+        width: 20
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1073
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1073
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1074
+        width: 17
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1073
+        width: 18
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1074
+        width: 17
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1073
+        width: 19
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1073
+        width: 22
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1077
+        width: 20
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1037
+        width: 25
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1034
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1034
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1034
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1033
+        width: 21
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1033
+        width: 21
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1034
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1034
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1034
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1037
+        width: 25
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_70
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 993
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_71
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 990
+        width: 21
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_72
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 990
+        width: 19
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_73
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 990
+        width: 14
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_74
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 990
+        width: 16
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_75
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 990
+        width: 16
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_76
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 990
+        width: 14
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_77
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 990
+        width: 19
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_78
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 990
+        width: 21
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_79
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 993
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_80
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 958
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_81
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 962
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_82
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 958
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_83
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 962
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_84
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 963
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_85
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 963
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_86
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 963
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_87
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 963
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_88
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 962
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_89
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 958
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_90
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 962
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_91
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 958
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_92
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 917
+        width: 20
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_93
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 913
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_94
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 913
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_95
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 914
+        width: 17
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_96
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 913
+        width: 18
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_97
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 914
+        width: 17
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_98
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 913
+        width: 19
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_99
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 913
+        width: 22
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_100
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 917
+        width: 20
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_101
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 877
+        width: 25
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_102
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 874
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_103
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 874
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_104
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 874
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_105
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 873
+        width: 21
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_106
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 873
+        width: 21
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_107
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 874
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_108
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 874
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_109
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 874
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_110
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 877
+        width: 25
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_111
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 833
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_112
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 830
+        width: 21
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_113
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 830
+        width: 19
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_114
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 830
+        width: 14
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_115
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 830
+        width: 16
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_116
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 830
+        width: 16
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_117
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 830
+        width: 14
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_118
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 830
+        width: 19
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_119
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 830
+        width: 21
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_120
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 833
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_121
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 798
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_122
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 802
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_123
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 798
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_124
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 802
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_125
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 803
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_126
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 803
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_127
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 803
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_128
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 803
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_129
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 802
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_130
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 798
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_131
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 802
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_132
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 798
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_133
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 757
+        width: 20
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_134
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 753
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_135
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 753
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_136
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 754
+        width: 17
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_137
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 753
+        width: 18
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_138
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 754
+        width: 17
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_139
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 753
+        width: 19
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_140
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 753
+        width: 22
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_141
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 757
+        width: 20
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_142
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 717
+        width: 25
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_143
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 714
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_144
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 714
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_145
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 714
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_146
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 713
+        width: 21
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_147
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 713
+        width: 21
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_148
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 714
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_149
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 714
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_150
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 714
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_151
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 717
+        width: 25
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_152
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 673
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_153
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 670
+        width: 21
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_154
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 670
+        width: 19
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_155
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 670
+        width: 14
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_156
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 670
+        width: 16
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_157
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 670
+        width: 16
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_158
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 670
+        width: 14
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_159
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 670
+        width: 19
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_160
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 670
+        width: 21
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_161
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 673
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_162
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 638
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_163
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 642
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_164
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 638
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_165
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 642
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_166
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 643
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_167
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 643
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_168
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 643
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_169
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 643
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_170
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 642
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_171
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 638
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_172
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 642
+        width: 21
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_173
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 638
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_174
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 597
+        width: 19
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_175
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 593
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_176
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 593
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_177
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 594
+        width: 18
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_178
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 593
+        width: 16
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_179
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 594
+        width: 18
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_180
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 593
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_181
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 593
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_182
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 597
+        width: 19
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_183
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 557
+        width: 26
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_184
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 554
+        width: 30
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_185
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 554
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_186
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 554
+        width: 25
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_187
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 553
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_188
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 553
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_189
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 554
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_190
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 554
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_191
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 554
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_192
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 557
+        width: 23
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_193
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 514
+        width: 18
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_194
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 511
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_195
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 511
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_196
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 511
+        width: 13
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_197
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 511
+        width: 15
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_198
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 511
+        width: 15
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_199
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 511
+        width: 13
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_200
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 511
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_201
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 511
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_202
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 514
+        width: 18
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_203
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 480
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_204
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 482
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_205
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 480
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_206
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 482
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_207
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 483
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_208
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 483
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_209
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 483
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_210
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 483
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_211
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 482
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_212
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 480
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_213
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 482
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_214
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 480
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_215
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 437
+        width: 19
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_216
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 433
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_217
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 433
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_218
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 434
+        width: 18
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_219
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 433
+        width: 16
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_220
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 434
+        width: 18
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_221
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 433
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_222
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 433
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_223
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 437
+        width: 19
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_224
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 397
+        width: 26
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_225
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 394
+        width: 30
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_226
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 394
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_227
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 394
+        width: 25
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_228
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 393
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_229
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 393
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_230
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 394
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_231
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 394
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_232
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 394
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_233
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 397
+        width: 23
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_234
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 354
+        width: 18
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_235
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 351
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_236
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 351
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_237
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 351
+        width: 13
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_238
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 351
+        width: 15
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_239
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 351
+        width: 15
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_240
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 351
+        width: 13
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_241
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 351
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_242
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 351
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_243
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 354
+        width: 18
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_244
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 320
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_245
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 322
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_246
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 320
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_247
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 322
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_248
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 323
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_249
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 323
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_250
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 323
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_251
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 323
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_252
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 322
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_253
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 320
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_254
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 322
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_255
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 320
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_256
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 277
+        width: 19
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_257
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 273
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_258
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 273
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_259
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 274
+        width: 18
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_260
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 273
+        width: 16
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_261
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 274
+        width: 18
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_262
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 273
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_263
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 273
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_264
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 277
+        width: 19
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_265
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 237
+        width: 26
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_266
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 234
+        width: 30
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_267
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 234
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_268
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 234
+        width: 25
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_269
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 233
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_270
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 233
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_271
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 234
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_272
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 234
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_273
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 234
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_274
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 237
+        width: 23
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_275
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 194
+        width: 18
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_276
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 191
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_277
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 191
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_278
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 191
+        width: 13
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_279
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 191
+        width: 15
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_280
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 191
+        width: 15
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_281
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 191
+        width: 13
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_282
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 191
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_283
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 191
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_284
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 194
+        width: 18
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_285
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 160
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_286
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 162
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_287
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 160
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_288
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 162
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_289
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 163
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_290
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 163
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_291
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 163
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_292
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 163
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_293
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 162
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_294
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 160
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_295
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 162
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_296
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 160
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_297
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 117
+        width: 19
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_298
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 113
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_299
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 113
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_300
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 114
+        width: 18
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_301
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 113
+        width: 16
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_302
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 114
+        width: 18
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_303
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 113
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_304
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 113
+        width: 23
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_305
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 117
+        width: 19
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_306
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 77
+        width: 26
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_307
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 74
+        width: 30
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_308
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 74
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_309
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 74
+        width: 25
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_310
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 73
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_311
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 73
+        width: 20
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_312
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 74
+        width: 22
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_313
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 74
+        width: 24
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_314
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 74
+        width: 27
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_315
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 77
+        width: 23
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_316
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 34
+        width: 18
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_317
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 31
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_318
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 31
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_319
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 31
+        width: 13
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_320
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 31
+        width: 15
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_321
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 31
+        width: 15
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_322
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 31
+        width: 13
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_323
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 31
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_324
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 31
+        width: 19
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_325
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 34
+        width: 18
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_326
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_327
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 2
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_328
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_329
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 2
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_330
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 3
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_331
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 3
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_332
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 3
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_333
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 3
+        width: 14
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_334
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_335
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 0
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_336
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 2
+        width: 21
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: metroid_samusaran_sheet_337
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 0
+        width: 16
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
