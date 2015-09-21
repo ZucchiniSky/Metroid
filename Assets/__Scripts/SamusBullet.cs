@@ -6,8 +6,7 @@ using System.Collections;
 
 public class SamusBullet : MonoBehaviour {
     public float bulletStopDist = 3f;
-
-
+    
     Vector3 bulletOrigin; 
 
     void Start()
