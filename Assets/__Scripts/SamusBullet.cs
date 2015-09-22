@@ -14,11 +14,19 @@ public class SamusBullet : MonoBehaviour {
     }
     void FixedUpdate()
     {
-       float dist = (transform.position - bulletOrigin).magnitude;
-       if (dist >= Samus.S.bulletStopDist)
-       {
-           Destroy(gameObject);
-       }
+        float dist = (transform.position - bulletOrigin).magnitude;
+        print(gameObject.transform.name);
+        if (gameObject.transform.name == "SamusMissile(Clone)")
+        {
+            if (dist >= 20f)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (dist >= Samus.S.bulletStopDist)
+        {
+            Destroy(gameObject);
+        }
         
     }
 
