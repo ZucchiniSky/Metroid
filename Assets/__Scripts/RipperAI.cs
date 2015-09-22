@@ -30,8 +30,8 @@ public class RipperAI : MonoBehaviour {
     void FixedUpdate() {
         int x = Mathf.RoundToInt(CameraFollow.S.transform.position.x);
         int y = Mathf.RoundToInt(CameraFollow.S.transform.position.y);
-        int i0 = x - 10;
-        int i1 = x + 10;
+        int i0 = x - 9;
+        int i1 = x + 9;
         int j0 = y - 9;
         int j1 = y + 9;
         Vector3 vel = rigid.velocity;

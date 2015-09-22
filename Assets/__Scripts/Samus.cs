@@ -36,6 +36,9 @@ public class Samus : MonoBehaviour {
     public float bulletStopDist = 3f;
     public float health = 35f;
     public bool jump = false;
+    public float invincibleTimer = 0f;
+    public Vector3 hitVel = new Vector3(0, 0, 0);
+    public bool hit = false;
     public bool ____________;
 
 	static public Samus S;
@@ -106,6 +109,10 @@ public class Samus : MonoBehaviour {
     }
     // FixedUpdate is called once per physics engine update (50fps)
     void FixedUpdate () {
+        if (invincibleTimer > 0)
+        {
+            invincibleTimer--;
+        }
         //Check to see whether we're grounded or not
         Vector3 checkLoc = feet.transform.position + Vector3.up * (feet.radius * 0.9f);
         grounded = Physics.Raycast(checkLoc, Vector3.down, feet.radius, groundPhysicsLayerMask) ||
@@ -178,6 +185,15 @@ public class Samus : MonoBehaviour {
 			}
             jump = false;
         }
+        if (hit)
+        {
+            vel = hitVel;
+            if(invincibleTimer == 0)
+            {
+                hit = false;
+            }
+        }
+
         rigid.velocity = vel;
 
     }  
@@ -214,6 +230,19 @@ public class Samus : MonoBehaviour {
             go.transform.position = bulletOriginUp.position;
             go.GetComponent<Rigidbody>().velocity = bulletOrigin.up * speedBullet;
             go.transform.rotation = turnUp;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy" && invincibleTimer <= 0)
+        {
+            hitVel = other.GetComponent<Rigidbody>().velocity;
+            hitVel -= rigid.velocity/2;
+            hit = true;
+            health -= 8f;
+            invincibleTimer = 30f;
+
         }
     }
 
