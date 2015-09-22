@@ -13,7 +13,7 @@ public enum Facing
     RU, //RIght up
     LU,
     U, //up
-    D, //down
+    D //down
 }
 
 public class Samus : MonoBehaviour {
@@ -30,11 +30,11 @@ public class Samus : MonoBehaviour {
 	public bool canUnmorph = true;
     public bool hasMissiles = false;
     public bool usingMissiles = false;
-    public float missiles = 0;
-    public float maxMissiles = 0;
+    public float missiles = 0f;
+    public float maxMissiles = 0f;
     public bool hasLongBeam = false;
     public float bulletStopDist = 3f;
-
+    public float health = 35f;
 
     public bool ____________;
 
@@ -71,7 +71,6 @@ public class Samus : MonoBehaviour {
         Transform feetTrans = this.transform.Find("Feet");
         feet = feetTrans.GetComponent<CapsuleCollider>();
 
-
         //set groundPhysicsLayerMask
         groundPhysicsLayerMask = LayerMask.GetMask("Ground");
         groundedCheckOffset = new Vector3(feet.height * 0.4f, 0, 0);
@@ -81,11 +80,26 @@ public class Samus : MonoBehaviour {
     }
 	void Update()
     {
+        
+        //Switch weapon
+        if (Input.GetKeyDown(KeyCode.RightShift))
+        {
+            if (!usingMissiles && missiles > 0)
+            {
+                usingMissiles = true;
+            }
+            else if (usingMissiles)
+            {
+                usingMissiles = false;
+            }
+        }
+
         //Press S to fire the gun
         if (Input.GetKeyDown(KeyCode.S) && !isMorph)
         {
             Fire();
         }
+        
 
     }
     // FixedUpdate is called once per physics engine update (50fps)
@@ -161,20 +175,7 @@ public class Samus : MonoBehaviour {
             	vel.y = speedJump;
 			}
         }
-        //Switch weapon
-        if (Input.GetKeyDown(KeyCode.RightShift))
-        {
-            if(!usingMissiles && missiles > 0)
-            {
-                usingMissiles = true;
-            }
-            else if (usingMissiles)
-            {
-                usingMissiles = false;
-            }
-        }
-
-            rigid.velocity = vel;
+        rigid.velocity = vel;
 
     }  
 

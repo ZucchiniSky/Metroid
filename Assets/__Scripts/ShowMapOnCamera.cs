@@ -15,6 +15,7 @@ public class ShowMapOnCamera : MonoBehaviour {
 
     public int              ss = 16;
     public Vector2          screenSize = new Vector2(16,15);
+    public bool[] Items = new bool[3];
     public int              screenSizeOverage = 2;
     public int              tileClearOverage = 2;
     public Texture2D        mapSprites;
@@ -138,18 +139,20 @@ public class ShowMapOnCamera : MonoBehaviour {
 							if (tileNum > 900)
 							{
                                 GameObject go = null;
-								if (tileNum == 950 && Samus.S.hasMorph == false)
+								if (tileNum == 950 && Items[0] == false)
 								{
 									go = Instantiate(morphBallPowerupPrefab);
-									
+                                    Items[0] = true;
 								}
-                                else if(tileNum == 951 && Samus.S.hasMissiles == false)
+                                else if(tileNum == 951 && Items[1] == false)
                                 {
                                     go = Instantiate(MissileItemPrefab);
+                                    Items[1] = true;
                                 }
-                                else if(tileNum == 952 && Samus.S.hasLongBeam == false)
+                                else if(tileNum == 952 && Items[2] == false)
                                 {
                                     go = Instantiate(LongBeamPrefab);
+                                    Items[2] = true;
                                 }
                                 if (go != null)
                                 {
