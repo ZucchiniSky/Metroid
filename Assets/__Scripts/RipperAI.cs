@@ -7,7 +7,7 @@ public class RipperAI : MonoBehaviour {
     public bool wallRight = false;
     public float velX = 2f;
     public bool facingRight = true;
-
+    public float originx, originy;
 
     public bool _______;
     public Rigidbody rigid;
@@ -23,17 +23,19 @@ public class RipperAI : MonoBehaviour {
         noRotYZ = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ 
             | RigidbodyConstraints.FreezePositionY;
         rigid.constraints = noRotYZ;
+        originx = transform.position.x;
+        originy = transform.position.y;
     }
-	
-	void FixedUpdate () {
+
+    void FixedUpdate() {
         int x = Mathf.RoundToInt(CameraFollow.S.transform.position.x);
         int y = Mathf.RoundToInt(CameraFollow.S.transform.position.y);
-        int i0 = x - 10;
-        int i1 = x + 10;
+        int i0 = x - 13;
+        int i1 = x + 13;
         int j0 = y - 9;
         int j1 = y + 9;
-        if(transform.position.x < i0 || transform.position.x > i1
-            || transform.position.y < j0 || transform.position.y > j1)
+        if (transform.position.x < i0 || transform.position.x > i1
+            || transform.position.y < j0 || transform.position.y > j1 || transform.position.x < originx-1)
         {
             Destroy(gameObject);
         }
@@ -44,32 +46,36 @@ public class RipperAI : MonoBehaviour {
         wallRight = Physics.Raycast(checkLoc2, Vector3.right, body.radius, groundPhysicsLayerMask);
         if (wallLeft && wallRight)
         {
+
             velX = 0;
         }
-        else if (facingRight && wallRight)
+        else if (facingRight)
         {
-            facingRight = false;
-            transform.rotation = turnLeft;
-            Vector3 pos = transform.position;
-            pos.x += 1f;
-            transform.position = pos;
-            velX = -2f;
+            if (wallRight || transform.position.x > i1 - 3)
+            {
+                facingRight = false;
+                transform.rotation = turnLeft;
+                Vector3 pos = transform.position;
+                pos.x += 1f;
+                transform.position = pos;
+                velX = -2f;
+            }
         }
-        else if (!facingRight && wallLeft)
+        else if (!facingRight)
         {
-
-            facingRight = true;
-            transform.rotation = Quaternion.identity;
-            Vector3 pos = transform.position;
-            pos.x -= 1f;
-            transform.position = pos;
-            velX = 2f;
+            if (wallLeft || transform.position.x < i0 + 3)
+            {
+                facingRight = true;
+                transform.rotation = Quaternion.identity;
+                Vector3 pos = transform.position;
+                pos.x -= 1f;
+                transform.position = pos;
+                velX = 2f;
+            }
         }
-        else
-        {
-            vel.x = velX;
-            rigid.velocity = vel;
-        }
+        vel.x = velX;
+        rigid.velocity = vel;
+        
 
         
     }
