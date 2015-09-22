@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6ba5473dcb3817a41bfdd3d2245d2de6
-timeCreated: 1442808914
+timeCreated: 1442955112
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -94,8 +94,8 @@ TextureImporter:
         y: 232
         width: 16
         height: 8
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: reo_descent
       rect:

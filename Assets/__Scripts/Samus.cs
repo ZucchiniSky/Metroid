@@ -35,7 +35,7 @@ public class Samus : MonoBehaviour {
     public bool hasLongBeam = false;
     public float bulletStopDist = 3f;
     public float health = 35f;
-
+    public bool jump = false;
     public bool ____________;
 
 	static public Samus S;
@@ -78,9 +78,9 @@ public class Samus : MonoBehaviour {
         noRotZ = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
         noRotYZ = noRotZ | RigidbodyConstraints.FreezePositionY;
     }
-	void Update()
+    void Update()
     {
-        
+
         //Switch weapon
         if (Input.GetKeyDown(KeyCode.RightShift))
         {
@@ -99,8 +99,10 @@ public class Samus : MonoBehaviour {
         {
             Fire();
         }
-        
-
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            jump = true;
+        }
     }
     // FixedUpdate is called once per physics engine update (50fps)
     void FixedUpdate () {
@@ -161,7 +163,7 @@ public class Samus : MonoBehaviour {
 			samusFull.center = new Vector3(0f,.4f,0f);
 		}
         //Allow Jump
-        if (Input.GetKeyDown(KeyCode.A))
+        if (jump)
         {
 			if(isMorph && canUnmorph)
 			{
@@ -174,6 +176,7 @@ public class Samus : MonoBehaviour {
 				rigid.constraints = noRotZ; // unlocks Y movement in Rigidbody
             	vel.y = speedJump;
 			}
+            jump = false;
         }
         rigid.velocity = vel;
 
