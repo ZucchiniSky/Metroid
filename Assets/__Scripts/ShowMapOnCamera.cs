@@ -26,9 +26,8 @@ public class ShowMapOnCamera : MonoBehaviour {
     public GameObject       tilePrefab;
     public Vector2[]        stopPoints;
 
-	public GameObject morphBallPowerupPrefab;
-    public GameObject MissileItemPrefab;
-    public GameObject LongBeamPrefab;
+	public GameObject morphBallPowerupPrefab, MissileItemPrefab, LongBeamPrefab;
+    public GameObject ripperPrefab;
 
     public bool             ________________;
     public int              w, h;
@@ -139,7 +138,12 @@ public class ShowMapOnCamera : MonoBehaviour {
 							if (tileNum > 900)
 							{
                                 GameObject go = null;
-								if (tileNum == 950 && Items[0] == false)
+                                string name = i.ToString("D3") + "x" + j.ToString("D3") + "spawnable";
+                                if (tileNum == 904 && GameObject.Find("/" + mapAnchor.name + "/" + name) == null)
+                                {
+                                    go = Instantiate(ripperPrefab);
+                                }
+                                else if (tileNum == 950 && Items[0] == false)
 								{
 									go = Instantiate(morphBallPowerupPrefab);
                                     Items[0] = true;
@@ -158,6 +162,7 @@ public class ShowMapOnCamera : MonoBehaviour {
                                 {
                                     go.transform.SetParent(mapAnchor, true);
                                     go.transform.localPosition = new Vector3(i, j, 0);
+                                    go.name = name;
                                 }
                                 
                             }
