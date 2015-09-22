@@ -26,6 +26,8 @@ public class ShowMapOnCamera : MonoBehaviour {
     public Vector2[]        stopPoints;
 
 	public GameObject morphBallPowerupPrefab;
+    public GameObject MissileItemPrefab;
+    public GameObject LongBeamPrefab;
 
     public bool             ________________;
     public int              w, h;
@@ -135,14 +137,27 @@ public class ShowMapOnCamera : MonoBehaviour {
 							t.SetTile(i,j);
 							if (tileNum > 900)
 							{
-								GameObject go;
-								if (tileNum == 950)
+                                GameObject go = null;
+								if (tileNum == 950 && Samus.S.hasMorph == false)
 								{
 									go = Instantiate(morphBallPowerupPrefab);
-									go.transform.SetParent(mapAnchor, true);
-									go.transform.localPosition = new Vector3(i, j, 0);
+									
 								}
-							}
+                                else if(tileNum == 951 && Samus.S.hasMissiles == false)
+                                {
+                                    go = Instantiate(MissileItemPrefab);
+                                }
+                                else if(tileNum == 952 && Samus.S.hasLongBeam == false)
+                                {
+                                    go = Instantiate(LongBeamPrefab);
+                                }
+                                if (go != null)
+                                {
+                                    go.transform.SetParent(mapAnchor, true);
+                                    go.transform.localPosition = new Vector3(i, j, 0);
+                                }
+                                
+                            }
 						}
 					}
 				}

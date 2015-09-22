@@ -22,12 +22,20 @@ public class Samus : MonoBehaviour {
     public float speedJump = 10f;
     public Facing _face = Facing.R;
     public Sprite spRight, spUp, spMorph;
-    public GameObject bulletPrefab;
+    public GameObject bulletPrefab, missilePrefab;
     public Transform bulletOrigin, bulletOriginUp;
     public float speedBullet = 10f;
 	public bool hasMorph = false;
 	public bool isMorph = false;
 	public bool canUnmorph = true;
+    public bool hasMissiles = false;
+    public bool usingMissiles = false;
+    public float missiles = 0;
+    public float maxMissiles = 0;
+    public bool hasLongBeam = false;
+    public float bulletStopDist = 3f;
+
+
     public bool ____________;
 
 	static public Samus S;
@@ -43,8 +51,8 @@ public class Samus : MonoBehaviour {
 
     RigidbodyConstraints noRotZ, noRotYZ;
     Quaternion turnLeft = Quaternion.Euler(0, 180, 0);
-
-	void Awake() {
+    Quaternion turnUp = Quaternion.Euler(0, 0, 90);
+    void Awake() {
 		S = this;
 	}
 
@@ -153,23 +161,55 @@ public class Samus : MonoBehaviour {
             	vel.y = speedJump;
 			}
         }
+        //Switch weapon
+        if (Input.GetKeyDown(KeyCode.RightShift))
+        {
+            if(!usingMissiles && missiles > 0)
+            {
+                usingMissiles = true;
+            }
+            else if (usingMissiles)
+            {
+                usingMissiles = false;
+            }
+        }
 
-        rigid.velocity = vel;
+            rigid.velocity = vel;
 
     }  
 
     void Fire()
     {
-        GameObject go = Instantiate<GameObject>(bulletPrefab);
+        GameObject go = null;
+        if (usingMissiles && missiles <= 0)
+        {
+            usingMissiles = false;
+        }
+        if(usingMissiles)
+        {
+            go = Instantiate<GameObject>(missilePrefab);
+            missiles--;
+        }
+        else
+        {
+            go = Instantiate<GameObject>(bulletPrefab);
+
+        }
+
         if (face == Facing.R || face == Facing.L)
         {
             go.transform.position = bulletOrigin.position;
             go.GetComponent<Rigidbody>().velocity = bulletOrigin.right * speedBullet;
+            if(face == Facing.L)
+            {
+                go.transform.rotation = turnLeft;
+            }
         }
         else
         {
             go.transform.position = bulletOriginUp.position;
             go.GetComponent<Rigidbody>().velocity = bulletOrigin.up * speedBullet;
+            go.transform.rotation = turnUp;
         }
     }
 

@@ -10,6 +10,8 @@ enemies:
 
 powerups:
 950 - morph ball
+951 - missile item
+952 - long beam powerup
 
 Destructible:
 

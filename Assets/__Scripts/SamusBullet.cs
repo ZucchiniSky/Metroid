@@ -5,7 +5,6 @@ using System.Collections;
 //2. Stop the bullet if it hits the Ground or enemy or something else
 
 public class SamusBullet : MonoBehaviour {
-    public float bulletStopDist = 3f;
     
     Vector3 bulletOrigin; 
 
@@ -15,11 +14,12 @@ public class SamusBullet : MonoBehaviour {
     }
     void FixedUpdate()
     {
-        float dist = (transform.position - bulletOrigin).magnitude;
-        if(dist >= bulletStopDist)
-        {
-            Destroy(gameObject);
-        }
+       float dist = (transform.position - bulletOrigin).magnitude;
+       if (dist >= Samus.S.bulletStopDist)
+       {
+           Destroy(gameObject);
+       }
+        
     }
 
 	void OnTriggerEnter(Collider other)
