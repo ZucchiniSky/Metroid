@@ -71,7 +71,7 @@ public class ZoomerAI : MonoBehaviour {
                 case direction.DOWN:
                     break;
             }
-            Vector3 checkLoc1 = body.transform.position + Vector3.left * (body.height * 0.45f);
+            /*Vector3 checkLoc1 = body.transform.position + Vector3.left * (body.height * 0.45f);
             wallLeft = Physics.Raycast(checkLoc1, Vector3.left, body.radius, groundPhysicsLayerMask);
             Vector3 checkLoc2 = body.transform.position + Vector3.right * (body.height * 0.45f);
             wallRight = Physics.Raycast(checkLoc2, Vector3.right, body.radius, groundPhysicsLayerMask);
@@ -96,7 +96,7 @@ public class ZoomerAI : MonoBehaviour {
             else if (!facingRight)
             {
                 velX = -2f;
-            }
+            }*/
         }
         switch (dir)
         {
