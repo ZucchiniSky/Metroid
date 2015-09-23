@@ -9,7 +9,9 @@ public class SkreeAI : MonoBehaviour {
     public float explodeDelay = 70f;
     public bool dive = false;
     public bool hitFloor = false;
+    
     public bool _______;
+    public float shot = 0;
     public Rigidbody rigid;
     public CapsuleCollider body;
     public int groundPhysicsLayerMask;
@@ -43,7 +45,14 @@ public class SkreeAI : MonoBehaviour {
                 {
                     vel.x = -speedX;
                 }
+                
                 vel.y = speedY;
+                if (shot >= 0)
+                {
+                    shot--;
+                    vel.x = 0;
+                    vel.y = 0;
+                }
                 Vector3 checkLoc = body.transform.position + Vector3.down * (body.height * 0.5f);
                 if (Physics.Raycast(checkLoc, Vector3.down, .5f, groundPhysicsLayerMask))
                 {
@@ -69,6 +78,7 @@ public class SkreeAI : MonoBehaviour {
         if (other.tag == "Bullet" || other.tag == "Missile")
         {
             hp--;
+            shot = 3f;
             if(hp <= 0)
             {
                 Destroy(gameObject);

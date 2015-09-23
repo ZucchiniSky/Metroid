@@ -18,6 +18,7 @@ public enum direction
 public class ZoomerAI : MonoBehaviour {
     public int hp;
     public bool _______;
+    public float shot = 0f;
     public float speed = 2f;
     public direction dir = direction.DOWNRIGHT;
     public Rigidbody rigid;
@@ -214,7 +215,12 @@ public class ZoomerAI : MonoBehaviour {
                     break;
             }
         }
-        
+        if (shot >= 0)
+        {
+            shot--;
+            vel.x = 0;
+            vel.y = 0;
+        }
         rigid.velocity = vel;
     }
 
@@ -229,6 +235,7 @@ public class ZoomerAI : MonoBehaviour {
         if (other.tag == "Bullet" || other.tag == "Missile")
         {
             hp--;
+            shot = 3f;
             if (hp <= 0)
             {
                 Destroy(gameObject);
