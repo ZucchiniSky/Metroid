@@ -11,6 +11,7 @@ public class Tile : MonoBehaviour {
     public Texture2D spriteTexture;
     public int x, y;
     public int tileNum;
+    public int missileDoorHp = 5;
     private BoxCollider bc;
     private Material mat;
 
@@ -142,8 +143,23 @@ public class Tile : MonoBehaviour {
                 }
                 foreach (GameObject i in doorTiles)
                 {
-                    i.GetComponent<BoxCollider>().enabled = false;
-                    i.GetComponent<SpriteRenderer>().enabled = false;
+                    bool enable = true;
+                    if (other.gameObject.tag == "Missile" && destructibility >= 'A' && destructibility <= 'F')
+                    {
+                        --i.GetComponent<Tile>().missileDoorHp;
+                        if (i.GetComponent<Tile>().missileDoorHp == 0)
+                        {
+                            enable = false;
+                        }
+                    } else
+                    {
+                        enable = false;
+                    }
+                    if (!enable)
+                    {
+                        i.GetComponent<BoxCollider>().enabled = false;
+                        i.GetComponent<SpriteRenderer>().enabled = false;
+                    }
                 }
             }
         }
