@@ -3,42 +3,49 @@ using System.Collections;
 
 public enum direction
 {
-    UP,
-    LEFT,
-    RIGHT,
-    DOWN
+    DOWNRIGHT, //The feet are pointed down and moving to the right
+    DOWNLEFT, 
+    UPRIGHT, // feet pointed up at the ceiling
+    UPLEFT,
+    RIGHTDOWN, //feet pointed right and going down
+    RIGHTUP,
+    LEFTDOWN, //feet pointed left and going down
+    LEFTUP,
+    
+
 }
 
 public class ZoomerAI : MonoBehaviour {
-    public int hp;
-
+    public int hp = 3;
+    public bool wallLeft, wallRight, wallUp, wallDown = false;
+    public float delay = 0f;
     public bool _______;
     public float speed = 2f;
-    public direction dir = direction.RIGHT;
+    public direction dir = direction.DOWNRIGHT;
     public Rigidbody rigid;
     public CapsuleCollider body;
     public int groundPhysicsLayerMask;
-    Quaternion turnLeft = Quaternion.Euler(0, 180, 0);
-    Quaternion turnUp = Quaternion.Euler(0, 90, 0);
-    Quaternion turnDown = Quaternion.Euler(0, 270, 0);
+    Quaternion feetRight = Quaternion.Euler(0, 0, 90);
+    Quaternion feetUp = Quaternion.Euler(0, 0, 180);
+    Quaternion feetLeft = Quaternion.Euler(0, 0, 270);
+    
 
     // Use this for initialization
     void Start () {
         int initDir = (int) Mathf.Round(Random.Range(0, 1));
         if (initDir == 0)
         {
-            dir = direction.LEFT;
+            dir = direction.DOWNLEFT;
         } else
         {
-            dir = direction.RIGHT;
+            dir = direction.DOWNRIGHT;
         }
         rigid = GetComponent<Rigidbody>();
         body = GetComponent<CapsuleCollider>();
         groundPhysicsLayerMask = LayerMask.GetMask("Ground");
     }
 	
-	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         int x = Mathf.RoundToInt(CameraFollow.S.transform.position.x);
         int y = Mathf.RoundToInt(CameraFollow.S.transform.position.y);
         int i0 = x - 9;
@@ -55,68 +62,162 @@ public class ZoomerAI : MonoBehaviour {
         else if (transform.position.x < i0 || transform.position.x > i1
             || transform.position.y < j0 || transform.position.y > j1)
         {
-            speed = 0;
+            vel.x = 0;
+            vel.y = 0;
         }
         else
         {
-            Vector2 checkLoc = body.transform.position;
+            Vector3 checkLoc = body.transform.position;
+            Vector3 checkLocLeft = body.transform.position + Vector3.left * body.radius;
+            Vector3 checkLocRight = body.transform.position + Vector3.right * body.radius;
+            Vector3 checkLocUp = body.transform.position + Vector3.up * body.radius;
+            Vector3 checkLocDown = body.transform.position + Vector3.down * body.radius;
+            wallLeft = Physics.Raycast(checkLoc, Vector3.left, body.height, groundPhysicsLayerMask);
+            wallRight = Physics.Raycast(checkLoc, Vector3.right, body.height, groundPhysicsLayerMask);
+            wallUp = Physics.Raycast(checkLoc, Vector3.up, body.height, groundPhysicsLayerMask);
+            wallDown = Physics.Raycast(checkLoc, Vector3.down, body.height, groundPhysicsLayerMask);
+            
+                switch (dir)
+                {
+                    case direction.DOWNLEFT:
+                        if (!Physics.Raycast(checkLocLeft, Vector3.down, body.height, groundPhysicsLayerMask)
+                            && !Physics.Raycast(checkLocRight, Vector3.down, body.height, groundPhysicsLayerMask))
+                        {
+                            dir = direction.RIGHTDOWN;
+                        }
+                        else if (wallLeft)
+                        {
+                            dir = direction.LEFTUP;
+                        }
+                        break;
+                    case direction.DOWNRIGHT:
+
+                        if (!Physics.Raycast(checkLocRight, Vector3.down, body.height, groundPhysicsLayerMask)
+                            && !Physics.Raycast(checkLocLeft, Vector3.down, body.height, groundPhysicsLayerMask))
+                        {
+                            dir = direction.LEFTDOWN;
+                        }
+                        else if (wallRight)
+                        {
+                            dir = direction.RIGHTUP;
+                        }
+                        break;
+                    case direction.UPLEFT:
+                        if (!wallLeft)
+                        {
+                            if (!Physics.Raycast(checkLocLeft, Vector3.up, body.height, groundPhysicsLayerMask)
+                            && !Physics.Raycast(checkLocRight, Vector3.up, body.height, groundPhysicsLayerMask))
+                                dir = direction.RIGHTUP;
+                        }
+                        else
+                        {
+                            dir = direction.LEFTDOWN;
+                        }
+                        break;
+                    case direction.UPRIGHT:
+
+                        if (!Physics.Raycast(checkLocRight, Vector3.up, body.height, groundPhysicsLayerMask)
+                            && !Physics.Raycast(checkLocLeft, Vector3.up, body.height, groundPhysicsLayerMask))
+                        {
+                            dir = direction.LEFTUP;
+                        }
+                        else if (wallRight)
+                        {
+                            dir = direction.RIGHTDOWN;
+                        }
+                        break;
+                    case direction.RIGHTDOWN:
+                        if (!Physics.Raycast(checkLocDown, Vector3.right, body.height, groundPhysicsLayerMask)
+                            && !Physics.Raycast(checkLocUp, Vector3.right, body.height, groundPhysicsLayerMask))
+                        {
+                            dir = direction.UPRIGHT;
+                        }
+                        else if (wallDown)
+                        {
+                            dir = direction.DOWNLEFT;
+                        }
+                        break;
+                    case direction.RIGHTUP:
+                        if (!Physics.Raycast(checkLocUp, Vector3.right, body.height, groundPhysicsLayerMask)
+                            && !Physics.Raycast(checkLocDown, Vector3.right, body.height, groundPhysicsLayerMask))
+                        {
+                            dir = direction.DOWNRIGHT;
+                        }
+                        else if (wallUp)
+                        {
+                            dir = direction.UPLEFT;
+                        }
+                        break;
+                    case direction.LEFTDOWN:
+
+                        if (!Physics.Raycast(checkLocDown, Vector3.left, body.height, groundPhysicsLayerMask)
+                            && !Physics.Raycast(checkLocUp, Vector3.left, body.height, groundPhysicsLayerMask))
+                        {
+                            dir = direction.UPLEFT;
+                        }
+                        else if (wallDown)
+                        {
+                            dir = direction.DOWNRIGHT;
+                        }
+                        break;
+                    case direction.LEFTUP:
+                        if (!Physics.Raycast(checkLocUp, Vector3.left, body.height, groundPhysicsLayerMask)
+                            && !Physics.Raycast(checkLocDown, Vector3.left, body.height, groundPhysicsLayerMask))
+                        {
+                            dir = direction.DOWNLEFT;
+                        }
+                        else if (wallUp)
+                        {
+                            dir = direction.UPRIGHT;
+                        }
+                        break;
+                }
+            print("After switch " +dir);
             switch (dir)
             {
-                case direction.LEFT:
+                case direction.DOWNLEFT:
+                    vel.x = -speed;
+                    vel.y = 0f;
+                    transform.rotation = Quaternion.identity;
                     break;
-                case direction.RIGHT:
+                case direction.DOWNRIGHT:
+                    vel.x = speed;
+                    vel.y = 0f;
+                    transform.rotation = Quaternion.identity;
                     break;
-                case direction.UP:
+                case direction.UPLEFT:
+                    vel.x = -speed;
+                    vel.y = 0f;
+                    transform.rotation = feetUp;
                     break;
-                case direction.DOWN:
+                case direction.UPRIGHT:
+                    vel.x = speed;
+                    vel.y = 0f;
+                    transform.rotation = feetUp;
+                    break;
+                case direction.RIGHTDOWN:
+                    vel.x = 0f;
+                    vel.y = -speed;
+                    transform.rotation = feetRight;
+                    break;
+                case direction.RIGHTUP:
+                    vel.x = 0f;
+                    vel.y = speed;
+                    transform.rotation = feetRight;
+                    break;
+                case direction.LEFTDOWN:
+                    vel.x = 0f;
+                    vel.y = -speed;
+                    transform.rotation = feetLeft;
+                    break;
+                case direction.LEFTUP:
+                    vel.x = 0f;
+                    vel.y = speed;
+                    transform.rotation = feetLeft;
                     break;
             }
-            /*Vector3 checkLoc1 = body.transform.position + Vector3.left * (body.height * 0.45f);
-            wallLeft = Physics.Raycast(checkLoc1, Vector3.left, body.radius, groundPhysicsLayerMask);
-            Vector3 checkLoc2 = body.transform.position + Vector3.right * (body.height * 0.45f);
-            wallRight = Physics.Raycast(checkLoc2, Vector3.right, body.radius, groundPhysicsLayerMask);
-            if (wallLeft && wallRight)
-            {
-                velX = 0;
-            }
-            else if (facingRight && wallRight)
-            {
-                facingRight = false;
-                transform.rotation = turnLeft;
-            }
-            else if (!facingRight && wallLeft)
-            {
-                facingRight = true;
-                transform.rotation = Quaternion.identity;
-            }
-            if (facingRight)
-            {
-                velX = 2f;
-            }
-            else if (!facingRight)
-            {
-                velX = -2f;
-            }*/
         }
-        switch (dir)
-        {
-            case direction.LEFT:
-                vel.x = -speed;
-                transform.rotation = turnLeft;
-                break;
-            case direction.RIGHT:
-                vel.x = speed;
-                transform.rotation = Quaternion.identity;
-                break;
-            case direction.UP:
-                vel.y = speed;
-                transform.rotation = turnUp;
-                break;
-            case direction.DOWN:
-                vel.y = -speed;
-                transform.rotation = turnDown;
-                break;
-        }
+        
         rigid.velocity = vel;
     }
 }
