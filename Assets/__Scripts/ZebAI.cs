@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-enum state
+enum zebState
 {
     STARTING,
     UPWARD,
@@ -12,7 +12,7 @@ enum state
 public class ZebAI : MonoBehaviour {
     public float speedUp = 5f;
     public float speedAir = 10f;
-    private state state = state.STARTING;
+    private zebState state = zebState.STARTING;
     private int delay = 10;
     private Rigidbody rigid;
     private bool right = true;
@@ -58,30 +58,30 @@ public class ZebAI : MonoBehaviour {
 
         switch (state)
         {
-            case state.STARTING:
+            case zebState.STARTING:
                 if (Mathf.Abs(gameObject.transform.position.x - Samus.S.transform.position.x) < 6)
                 {
-                    state = state.UPWARD;
+                    state = zebState.UPWARD;
                 }
                 break;
-            case state.UPWARD:
+            case zebState.UPWARD:
                 if (gameObject.transform.position.y > Samus.S.transform.position.y)
                 {
                     rigid.velocity = new Vector3(0f, 0f);
-                    state = state.WAITING;
+                    state = zebState.WAITING;
                 } else
                 {
                     rigid.velocity = new Vector3(0f, speedUp);
                 }
                 break;
-            case state.WAITING:
+            case zebState.WAITING:
                 --delay;
                 if (delay <= 0)
                 {
-                    state = state.ATTACKING;
+                    state = zebState.ATTACKING;
                 }
                 break;
-            case state.ATTACKING:
+            case zebState.ATTACKING:
                 rigid.velocity = new Vector3(right ? speedAir : -speedAir, 0f);
                 break;
         }

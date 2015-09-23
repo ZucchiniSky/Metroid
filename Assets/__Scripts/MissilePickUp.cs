@@ -32,7 +32,5 @@ public class MissilePickUp : MonoBehaviour {
             }
             Destroy(gameObject);
         }
-
-
     }
 }
