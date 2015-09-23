@@ -33,7 +33,7 @@ public class ZoomerAI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        int initDir = (int) Mathf.Round(Random.Range(0, 1));
+        int initDir = Random.Range(0, 2);
         if (initDir == 0)
         {
             dir = direction.DOWNLEFT;

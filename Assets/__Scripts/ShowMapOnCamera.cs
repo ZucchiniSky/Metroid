@@ -27,7 +27,7 @@ public class ShowMapOnCamera : MonoBehaviour {
     public Vector2[]        stopPoints;
 
 	public GameObject morphBallPowerupPrefab, MissileItemPrefab, LongBeamPrefab;
-    public GameObject zoomerPrefab, zoomerRedPrefab, ripperPrefab, skreePrefab;
+    public GameObject zoomerPrefab, zoomerRedPrefab, ripperPrefab, skreePrefab, zebPrefab;
 
     public bool             ________________;
     public int              w, h;
@@ -164,6 +164,10 @@ public class ShowMapOnCamera : MonoBehaviour {
                                 else if (tileNum == 904 && GameObject.Find("/" + mapAnchor.name + "/" + name) == null)
                                 {
                                     go = Instantiate(ripperPrefab);
+                                }
+                                else if (tileNum == 906 && GameObject.Find("/" + mapAnchor.name + "/" + name) == null)
+                                {
+                                    go = Instantiate(zebPrefab);
                                 }
                                 else if (tileNum == 950 && Items[0] == false)
 								{
