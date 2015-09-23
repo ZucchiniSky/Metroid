@@ -142,6 +142,11 @@ public class ShowMapOnCamera : MonoBehaviour {
                                 if (tileNum == 901 && GameObject.Find("/" + mapAnchor.name + "/" + name) == null)
                                 {
                                     go = Instantiate(zoomerPrefab);
+                                    ZoomerAI zoomerAi = go.GetComponent<ZoomerAI>();
+                                    zoomerAi.originX = i;
+                                    zoomerAi.originY = j;
+                                    zoomerAi.currentX = i;
+                                    zoomerAi.currentY = j;
                                 }
                                 if (tileNum == 904 && GameObject.Find("/" + mapAnchor.name + "/" + name) == null)
                                 {

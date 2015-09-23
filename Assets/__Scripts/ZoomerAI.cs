@@ -16,19 +16,19 @@ public enum direction
 }
 
 public class ZoomerAI : MonoBehaviour {
-    public int hp = 3;
-    public bool wallLeft, wallRight, wallUp, wallDown = false;
-    public float delay = 0f;
+    public int hp;
     public bool _______;
     public float speed = 2f;
     public direction dir = direction.DOWNRIGHT;
     public Rigidbody rigid;
     public CapsuleCollider body;
-    public int groundPhysicsLayerMask;
+    public int originX;
+    public int originY;
+    public int currentX;
+    public int currentY;
     Quaternion feetRight = Quaternion.Euler(0, 0, 90);
     Quaternion feetUp = Quaternion.Euler(0, 0, 180);
     Quaternion feetLeft = Quaternion.Euler(0, 0, 270);
-    
 
     // Use this for initialization
     void Start () {
@@ -42,20 +42,19 @@ public class ZoomerAI : MonoBehaviour {
         }
         rigid = GetComponent<Rigidbody>();
         body = GetComponent<CapsuleCollider>();
-        groundPhysicsLayerMask = LayerMask.GetMask("Ground");
     }
 	
 	void FixedUpdate () {
         int x = Mathf.RoundToInt(CameraFollow.S.transform.position.x);
         int y = Mathf.RoundToInt(CameraFollow.S.transform.position.y);
-        int i0 = x - 18;
-        int i1 = x + 18;
-        int j0 = y - 18;
-        int j1 = y + 18;
+        int i0 = x - 9;
+        int i1 = x + 9;
+        int j0 = y - 9;
+        int j1 = y + 9;
         Vector3 vel = rigid.velocity;
 
-        if (transform.position.x < i0 - 20 || transform.position.x > i1 + 20
-            || transform.position.y < j0 - 20 || transform.position.y > j1 + 20)
+        if (transform.position.x < i0 - 9 || transform.position.x > i1 + 9
+            || transform.position.y < j0 - 9 || transform.position.y > j1 + 9)
         {
             Destroy(gameObject);
         }
@@ -67,112 +66,115 @@ public class ZoomerAI : MonoBehaviour {
         }
         else
         {
-            Vector3 checkLoc = body.transform.position;
-            Vector3 checkLocLeft = body.transform.position + Vector3.left * body.radius;
-            Vector3 checkLocRight = body.transform.position + Vector3.right * body.radius;
-            Vector3 checkLocUp = body.transform.position + Vector3.up * body.radius;
-            Vector3 checkLocDown = body.transform.position + Vector3.down * body.radius;
-            wallLeft = Physics.Raycast(checkLoc, Vector3.left, body.height, groundPhysicsLayerMask);
-            wallRight = Physics.Raycast(checkLoc, Vector3.right, body.height, groundPhysicsLayerMask);
-            wallUp = Physics.Raycast(checkLoc, Vector3.up, body.height, groundPhysicsLayerMask);
-            wallDown = Physics.Raycast(checkLoc, Vector3.down, body.height, groundPhysicsLayerMask);
+            int lastX = currentX;
+            int lastY = currentY;
+            if (dir == direction.DOWNLEFT || dir == direction.UPLEFT)
+            {
+                currentX = (int)Mathf.Ceil(transform.localPosition.x);
+            } else if (dir == direction.DOWNRIGHT || dir == direction.UPRIGHT)
+            {
+                currentX = (int)Mathf.Floor(transform.localPosition.x);
+            }
+            if (dir == direction.LEFTDOWN || dir == direction.RIGHTDOWN)
+            {
+                currentY = (int)Mathf.Ceil(transform.localPosition.y);
+            } else if (dir == direction.LEFTUP || dir == direction.RIGHTUP)
+            {
+                currentY = (int)Mathf.Floor(transform.localPosition.y);
+            }
             
+            print(currentX);
+            print(currentY);
+            print(dir);
+
+            if (lastX != currentX || lastY != currentY)
+            {
                 switch (dir)
                 {
                     case direction.DOWNLEFT:
-                        if (!Physics.Raycast(checkLocLeft, Vector3.down, body.height, groundPhysicsLayerMask)
-                            && !Physics.Raycast(checkLocRight, Vector3.down, body.height, groundPhysicsLayerMask))
+                        if (tileIsEmpty(currentX, currentY - 1))
                         {
                             dir = direction.RIGHTDOWN;
                         }
-                        else if (wallLeft)
+                        else if (!tileIsEmpty(currentX - 1, currentY))
                         {
                             dir = direction.LEFTUP;
                         }
                         break;
                     case direction.DOWNRIGHT:
-
-                        if (!Physics.Raycast(checkLocRight, Vector3.down, body.height, groundPhysicsLayerMask)
-                            && !Physics.Raycast(checkLocLeft, Vector3.down, body.height, groundPhysicsLayerMask))
+                        if (tileIsEmpty(currentX, currentY - 1))
                         {
                             dir = direction.LEFTDOWN;
                         }
-                        else if (wallRight)
+                        else if (!tileIsEmpty(currentX + 1, currentY))
                         {
                             dir = direction.RIGHTUP;
                         }
                         break;
                     case direction.UPLEFT:
-                        if (!wallLeft)
+                        if (tileIsEmpty(currentX, currentY + 1))
                         {
-                            if (!Physics.Raycast(checkLocLeft, Vector3.up, body.height, groundPhysicsLayerMask)
-                            && !Physics.Raycast(checkLocRight, Vector3.up, body.height, groundPhysicsLayerMask))
-                                dir = direction.RIGHTUP;
+                            dir = direction.RIGHTUP;
                         }
-                        else
+                        else if (!tileIsEmpty(currentX - 1, currentY))
                         {
                             dir = direction.LEFTDOWN;
                         }
                         break;
                     case direction.UPRIGHT:
-
-                        if (!Physics.Raycast(checkLocRight, Vector3.up, body.height, groundPhysicsLayerMask)
-                            && !Physics.Raycast(checkLocLeft, Vector3.up, body.height, groundPhysicsLayerMask))
+                        if (tileIsEmpty(currentX, currentY + 1))
                         {
                             dir = direction.LEFTUP;
                         }
-                        else if (wallRight)
+                        else if (!tileIsEmpty(currentX + 1, currentY))
                         {
                             dir = direction.RIGHTDOWN;
                         }
                         break;
                     case direction.RIGHTDOWN:
-                        if (!Physics.Raycast(checkLocDown, Vector3.right, body.height, groundPhysicsLayerMask)
-                            && !Physics.Raycast(checkLocUp, Vector3.right, body.height, groundPhysicsLayerMask))
+                        if (tileIsEmpty(currentX + 1, currentY))
                         {
                             dir = direction.UPRIGHT;
                         }
-                        else if (wallDown)
+                        else if (!tileIsEmpty(currentX, currentY - 1))
                         {
                             dir = direction.DOWNLEFT;
                         }
                         break;
                     case direction.RIGHTUP:
-                        if (!Physics.Raycast(checkLocUp, Vector3.right, body.height, groundPhysicsLayerMask)
-                            && !Physics.Raycast(checkLocDown, Vector3.right, body.height, groundPhysicsLayerMask))
+                        if (tileIsEmpty(currentX + 1, currentY))
                         {
                             dir = direction.DOWNRIGHT;
                         }
-                        else if (wallUp)
+                        else if (!tileIsEmpty(currentX, currentY + 1))
                         {
                             dir = direction.UPLEFT;
                         }
                         break;
                     case direction.LEFTDOWN:
-
-                        if (!Physics.Raycast(checkLocDown, Vector3.left, body.height, groundPhysicsLayerMask)
-                            && !Physics.Raycast(checkLocUp, Vector3.left, body.height, groundPhysicsLayerMask))
+                        if (tileIsEmpty(currentX - 1, currentY))
                         {
                             dir = direction.UPLEFT;
                         }
-                        else if (wallDown)
+                        else if (!tileIsEmpty(currentX, currentY - 1))
                         {
                             dir = direction.DOWNRIGHT;
                         }
                         break;
                     case direction.LEFTUP:
-                        if (!Physics.Raycast(checkLocUp, Vector3.left, body.height, groundPhysicsLayerMask)
-                            && !Physics.Raycast(checkLocDown, Vector3.left, body.height, groundPhysicsLayerMask))
+                        if (tileIsEmpty(currentX - 1, currentY))
                         {
                             dir = direction.DOWNLEFT;
                         }
-                        else if (wallUp)
+                        else if (!tileIsEmpty(currentX, currentY + 1))
                         {
                             dir = direction.UPRIGHT;
                         }
                         break;
                 }
-            print("After switch " +dir);
+            }
+
+            print(dir);
             switch (dir)
             {
                 case direction.DOWNLEFT:
@@ -219,5 +221,11 @@ public class ZoomerAI : MonoBehaviour {
         }
         
         rigid.velocity = vel;
+    }
+
+    bool tileIsEmpty(int x, int y)
+    {
+        int tile = ShowMapOnCamera.MAP[x, y];
+        return tile == 0 || tile >= 900;
     }
 }
