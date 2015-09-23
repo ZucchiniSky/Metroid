@@ -226,4 +226,16 @@ public class ZoomerAI : MonoBehaviour {
         int tile = ShowMapOnCamera.MAP[x, y];
         return tile == 0 || tile >= 900;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Bullet" || other.tag == "Missile")
+        {
+            hp--;
+            if (hp <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }
