@@ -83,9 +83,6 @@ public class ZoomerAI : MonoBehaviour {
                 currentY = (int)Mathf.Floor(transform.localPosition.y);
             }
             
-            print(currentX);
-            print(currentY);
-            print(dir);
 
             if (lastX != currentX || lastY != currentY)
             {

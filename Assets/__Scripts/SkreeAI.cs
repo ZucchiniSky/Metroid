@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SkreeAI : MonoBehaviour {
 
-    public float health = 3f;
+    public float hp = 3f;
     public float speedX = 2f;
     public float speedY = -7f;
     public float explodeDelay = 70f;
@@ -66,10 +66,10 @@ public class SkreeAI : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Bullet")
+        if (other.tag == "Bullet" || other.tag == "Missile")
         {
-            health--;
-            if(health <= 0)
+            hp--;
+            if(hp <= 0)
             {
                 Destroy(gameObject);
             }
