@@ -173,8 +173,6 @@ public class ZoomerAI : MonoBehaviour {
                         break;
                 }
             }
-
-            print(dir);
             switch (dir)
             {
                 case direction.DOWNLEFT:

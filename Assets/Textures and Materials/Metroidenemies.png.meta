@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6ba5473dcb3817a41bfdd3d2245d2de6
-timeCreated: 1442963743
+timeCreated: 1442987477
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -65,7 +65,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: zoomer_yellow
       rect:
@@ -84,8 +84,8 @@ TextureImporter:
         y: 251
         width: 16
         height: 32
-      alignment: 9
-      pivot: {x: .5, y: .25}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ripper
       rect:
