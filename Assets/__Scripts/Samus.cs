@@ -101,7 +101,17 @@ public class Samus : MonoBehaviour {
                 usingMissiles = false;
             }
         }
-
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            if (invincibleTimer != -2)
+            {
+                invincibleTimer = -2;
+            }
+            else
+            {
+                invincibleTimer = 0;
+            }
+        }
         //Press S to fire the gun
         if (Input.GetKeyDown(KeyCode.S) && !isMorph)
         {
@@ -267,7 +277,7 @@ public class Samus : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy" && invincibleTimer <= 0)
+        if (other.tag == "Enemy" && invincibleTimer == 0)
         {
             /*float xVel = face == Facing.L ? 3f : -3f;
             hitVel = new Vector3(xVel, 0f, 0f);*/
