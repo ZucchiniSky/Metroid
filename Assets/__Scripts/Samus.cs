@@ -61,6 +61,7 @@ public class Samus : MonoBehaviour {
     Quaternion turnUp = Quaternion.Euler(0, 0, 90);
     void Awake() {
 		S = this;
+        Physics.gravity = new Vector3(0f, -17f, 0f);
 	}
 
     // Use this for initialization
@@ -219,14 +220,13 @@ public class Samus : MonoBehaviour {
         //Enemy knockback
         if (hit)
         {
-            vel = hitVel;
-            if(invincibleTimer == 0)
-            {
-                hit = false;
-            }
+            rigid.velocity = new Vector3(-rigid.velocity.x, rigid.velocity.y / 2, 0);
+            hit = false;
+        } else if (invincibleTimer <= 0)
+        {
+            rigid.velocity = vel;
         }
 
-        rigid.velocity = vel;
 
     }  
 
@@ -269,12 +269,11 @@ public class Samus : MonoBehaviour {
     {
         if (other.tag == "Enemy" && invincibleTimer <= 0)
         {
-            hitVel = other.GetComponent<Rigidbody>().velocity;
-            hitVel -= rigid.velocity/2;
+            /*float xVel = face == Facing.L ? 3f : -3f;
+            hitVel = new Vector3(xVel, 0f, 0f);*/
             hit = true;
             health -= 8f;
             invincibleTimer = 30f;
-
         }
     }
 
