@@ -219,4 +219,17 @@ public class ZoomerAI : MonoBehaviour {
         
         rigid.velocity = vel;
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Bullet")
+        {
+            hp--;
+            if (hp <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+
+    }
 }

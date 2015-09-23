@@ -6,7 +6,7 @@ public class SkreeAI : MonoBehaviour {
     public float health = 3f;
     public float speedX = 2f;
     public float speedY = -7f;
-    public float explodeDelay = 10f;
+    public float explodeDelay = 70f;
     public bool dive = false;
     public bool hitFloor = false;
     public bool _______;
@@ -56,7 +56,11 @@ public class SkreeAI : MonoBehaviour {
             }
             else
             {
-                Destroy(gameObject);
+                explodeDelay--;
+                if (explodeDelay <= 0)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
 	}
