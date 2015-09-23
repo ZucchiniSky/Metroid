@@ -14,7 +14,7 @@ public class ShowMapOnCamera : MonoBehaviour {
     static public float         SSF;
 
     public int              ss = 16;
-    public Vector2          screenSize = new Vector2(16,15);
+    public Vector2          screenSize = new Vector2(32,30);
     public bool[] Items = new bool[3];
     public int              screenSizeOverage = 2;
     public int              tileClearOverage = 2;

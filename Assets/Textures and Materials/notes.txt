@@ -15,7 +15,11 @@ powerups:
 
 Destructible:
 
+1 - bomb
+
 doors:
+
+regular
 3 - bottom left
 4 - middle left
 5 - top left
@@ -23,3 +27,12 @@ doors:
 6 - bottom right
 7 - middle right
 8 - top right
+
+missile
+A - bottom left
+B - middle left
+C - top left
+
+D - bottom right
+E - middle right
+F - top right

@@ -82,13 +82,13 @@ public class Tile : MonoBehaviour {
     {
         if (ShowMapOnCamera.S == null) return;
 
-        if (other.gameObject.tag == "Bullet")
+        if (other.gameObject.tag == "Bullet" || other.gameObject.tag == "Missile")
         {
-            if (destructibility >= '3' && destructibility <= '8')
+            if ((destructibility >= '3' && destructibility <= '8') || (other.gameObject.tag == "Missile" && destructibility >= 'A' && destructibility <= 'F'))
             {
                 // this tile represents a door;
                 GameObject[] doorTiles = new GameObject[6];
-                if (destructibility == '3')
+                if (destructibility == '3' || destructibility == 'A')
                 {
                     doorTiles[0] = gameObject;
                     doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y + 1].gameObject;
@@ -97,7 +97,7 @@ public class Tile : MonoBehaviour {
                     doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y + 1].gameObject;
                     doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y + 2].gameObject;
                 }
-                else if (destructibility == '4')
+                else if (destructibility == '4' || destructibility == 'B')
                 {
                     doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;
                     doorTiles[1] = gameObject;
@@ -106,7 +106,7 @@ public class Tile : MonoBehaviour {
                     doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y].gameObject;
                     doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y + 1].gameObject;
                 }
-                else if (destructibility == '5')
+                else if (destructibility == '5' || destructibility == 'C')
                 {
                     doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 2].gameObject;
                     doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;
@@ -115,7 +115,7 @@ public class Tile : MonoBehaviour {
                     doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y - 1].gameObject;
                     doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y].gameObject;
                 }
-                else if (destructibility == '6')
+                else if (destructibility == '6' || destructibility == 'D')
                 {
                     doorTiles[0] = gameObject;
                     doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y + 1].gameObject;
@@ -123,7 +123,7 @@ public class Tile : MonoBehaviour {
                     doorTiles[3] = ShowMapOnCamera.MAP_TILES[x - 3, y].gameObject;
                     doorTiles[4] = ShowMapOnCamera.MAP_TILES[x - 3, y + 1].gameObject;
                     doorTiles[5] = ShowMapOnCamera.MAP_TILES[x - 3, y + 2].gameObject;
-                } else if (destructibility == '7')
+                } else if (destructibility == '7' || destructibility == 'E')
                 {
                     doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;
                     doorTiles[1] = gameObject;
@@ -131,7 +131,7 @@ public class Tile : MonoBehaviour {
                     doorTiles[3] = ShowMapOnCamera.MAP_TILES[x - 3, y - 1].gameObject;
                     doorTiles[4] = ShowMapOnCamera.MAP_TILES[x - 3, y].gameObject;
                     doorTiles[5] = ShowMapOnCamera.MAP_TILES[x - 3, y + 1].gameObject;
-                } else if (destructibility == '8')
+                } else if (destructibility == '8' || destructibility == 'F')
                 {
                     doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 2].gameObject;
                     doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;

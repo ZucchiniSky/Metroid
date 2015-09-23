@@ -18,16 +18,20 @@ public enum Facing
 
 public class Samus : MonoBehaviour {
     //These are variables set in the Inspector
-    public float speedX = 4f;
-    public float speedJump = 10f;
     public Facing _face = Facing.R;
     public Sprite spRight, spUp, spMorph;
     public GameObject bulletPrefab, missilePrefab;
     public Transform bulletOrigin, bulletOriginUp;
+    public bool ____________;
+
+    public float speedX = 4f;
+    public float speedXStandingJump = 3f;
+    public float speedJump = 10.5f;
     public float speedBullet = 10f;
-	public bool hasMorph = false;
-	public bool isMorph = false;
-	public bool canUnmorph = true;
+    public bool runningJump = false;
+    public bool hasMorph = false;
+    public bool isMorph = false;
+    public bool canUnmorph = true;
     public bool hasMissiles = false;
     public bool usingMissiles = false;
     public float missiles = 0f;
@@ -36,12 +40,12 @@ public class Samus : MonoBehaviour {
     public float bulletStopDist = 3f;
     public float health = 35f;
     public bool jump = false;
+    public bool jumpCancel = false;
     public float invincibleTimer = 0f;
     public Vector3 hitVel = new Vector3(0, 0, 0);
     public bool hit = false;
-    public bool ____________;
 
-	static public Samus S;
+    static public Samus S;
 
     //These are variables set on Start()
     public Rigidbody rigid;
@@ -106,6 +110,10 @@ public class Samus : MonoBehaviour {
         {
             jump = true;
         }
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            jumpCancel = true;
+        }
     }
     // FixedUpdate is called once per physics engine update (50fps)
     void FixedUpdate () {
@@ -133,19 +141,26 @@ public class Samus : MonoBehaviour {
         Vector3 vel = rigid.velocity;
 
         //Handle L and R movement
+        float speed = grounded ? speedX : (runningJump ? speedX : speedXStandingJump);
         if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
         {
-            vel.x = -speedX;
+            vel.x = -speed;
             face = Facing.L;
         }
         else if (Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
         {
-            vel.x = speedX;
+            vel.x = speed;
             face = Facing.R;
         }
         else
         {
-            vel.x = 0;
+            if (!grounded && runningJump)
+            {
+                vel.x *= 9/10f;
+            } else
+            {
+                vel.x = 0;
+            }
         }
         //Raises and lowers gun
         if(Input.GetKey(KeyCode.UpArrow))
@@ -153,16 +168,16 @@ public class Samus : MonoBehaviour {
             face = Facing.U;
 			if(isMorph && canUnmorph)
 			{
-			isMorph = false;
-			samusFull.height = 2f;
-			samusFull.center = new Vector3(0f, 1f,0f);
+			    isMorph = false;
+			    samusFull.height = 1.8f;
+			    samusFull.center = new Vector3(0f, 1f,0f);
 			}
         }
         else
         {
             face = Facing.D;
         }
-		//morph ball
+		//Morph ball
 		if (Input.GetKeyDown(KeyCode.DownArrow) && grounded && hasMorph)
 		{
 			isMorph = true;
@@ -175,16 +190,33 @@ public class Samus : MonoBehaviour {
 			if(isMorph && canUnmorph)
 			{
 				isMorph = false;
-				samusFull.height = 2f;
+				samusFull.height = 1.8f;
 				samusFull.center = new Vector3(0f, 1f,0f);
 			}
 			else if(!isMorph && grounded)
 			{
 				rigid.constraints = noRotZ; // unlocks Y movement in Rigidbody
             	vel.y = speedJump;
+                if (vel.x != 0)
+                {
+                    runningJump = true;
+                } else
+                {
+                    runningJump = false;
+                }
 			}
             jump = false;
         }
+        //Allow Jump cancel
+        if (jumpCancel)
+        {
+            if (vel.y > 0 && !grounded)
+            {
+                vel.y = 0;
+            }
+            jumpCancel = false;
+        }
+        //Enemy knockback
         if (hit)
         {
             vel = hitVel;

@@ -5,7 +5,7 @@ public class CameraFollow : MonoBehaviour {
 	static public CameraFollow S; // This is a Singleton of the CameraFollow class. - JB
 
     public Transform        poi; // The Point Of Interest of the CameraFollow script. - JB
-    public Vector3          offset = new Vector3(0,1,-10);
+    public Vector3          offset = new Vector3(0,20,-10);
     public float            easingU = 0.05f;
 
     private Camera          cam;
