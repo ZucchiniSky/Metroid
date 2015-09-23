@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d6abd6716d0bc3a4f873f19447b41b93
-timeCreated: 1442961963
+timeCreated: 1442995082
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -1382,19 +1382,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 70
-        width: 16
-        height: 16
+        y: 67
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Metroid - Items_114
       rect:
         serializedVersion: 2
-        x: 96
-        y: 70
-        width: 16
-        height: 16
+        x: 100
+        y: 68
+        width: 10
+        height: 12
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

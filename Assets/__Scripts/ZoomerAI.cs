@@ -30,6 +30,7 @@ public class ZoomerAI : MonoBehaviour {
     Quaternion feetRight = Quaternion.Euler(0, 0, 90);
     Quaternion feetUp = Quaternion.Euler(0, 0, 180);
     Quaternion feetLeft = Quaternion.Euler(0, 0, 270);
+    public GameObject energyPrefab, missilePrefab;
 
     // Use this for initialization
     void Start () {
@@ -234,10 +235,24 @@ public class ZoomerAI : MonoBehaviour {
     {
         if (other.tag == "Bullet" || other.tag == "Missile")
         {
-            hp--;
+            if (other.tag == "Bullet")
+                hp--;
+            else
+                hp = 0;
             shot = 3f;
             if (hp <= 0)
             {
+                int initDir = (int)Mathf.Round(Random.Range(0, 3));
+                if (initDir == 0)
+                {
+                    GameObject go = Instantiate(energyPrefab);
+                    go.transform.position = transform.position;
+                }
+                else if (initDir == 1 && Samus.S.hasMissiles)
+                {
+                    GameObject go = Instantiate(missilePrefab);
+                    go.transform.position = transform.position;
+                }
                 Destroy(gameObject);
             }
         }
