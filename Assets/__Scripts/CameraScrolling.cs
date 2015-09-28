@@ -27,7 +27,6 @@ public class CameraScrolling : MonoBehaviour
     private List<int> doorsXList = new List<int>();
     private int minDoor = int.MinValue;
     private int maxDoor = int.MaxValue;
-    private int scrollingDest = 0;
     private bool scrollingRight;
     private int numDoors = 0;
 

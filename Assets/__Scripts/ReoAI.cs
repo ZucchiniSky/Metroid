@@ -11,7 +11,8 @@ enum reoState
 }
 
 public class ReoAI : MonoBehaviour {
-
+    public float hp = 4f;
+    public float shot = 0f;
     public int speedX = 7;
     public int speedY = 15;
     private reoState state = reoState.NEW;
@@ -21,6 +22,7 @@ public class ReoAI : MonoBehaviour {
     private int delay = initDelay;
     private CapsuleCollider body;
     public int groundPhysicsLayerMask;
+    public GameObject energyPrefab, missilePrefab;
 
     // Use this for initialization
     void Start () {
@@ -112,6 +114,39 @@ public class ReoAI : MonoBehaviour {
                     }
                     break;
             }
+            if (shot >= 0)
+            {
+                shot--;
+                rigid.velocity = new Vector3(0, 0, 0);
+            }
         }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Bullet" || other.tag == "Missile")
+        {
+            if (other.tag == "Bullet")
+                hp--;
+            else
+                hp = 0;
+            shot = 3f;
+            if (hp <= 0)
+            {
+                int initDir = (int)Mathf.Round(Random.Range(0, 3));
+                if (initDir == 0)
+                {
+                    GameObject go = Instantiate(energyPrefab);
+                    go.transform.position = transform.position;
+                }
+                else if (initDir == 1 && Samus.S.hasMissiles)
+                {
+                    GameObject go = Instantiate(missilePrefab);
+                    go.transform.position = transform.position;
+                }
+                Destroy(gameObject);
+            }
+        }
+
+
     }
 }

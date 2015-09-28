@@ -51,7 +51,8 @@ public class Samus : MonoBehaviour {
     private bool door = false;
     private bool doorRight = false;
     private float doorX;
-
+    
+    public float respawn = 0f;
     static public Samus S;
 
     //These are variables set on Start()
@@ -257,6 +258,11 @@ public class Samus : MonoBehaviour {
             jumpCancel = false;
         }
         //Enemy knockback
+        if(respawn > 0)
+        {
+            rigid.velocity = new Vector3(0, 0, 0);
+            respawn--;
+        }
         if (hit)
         {
             rigid.velocity = knockback;
@@ -314,6 +320,13 @@ public class Samus : MonoBehaviour {
             health -= 8f;
             invincibleTimer = 30f;
             lastCollision = other;
+            if (health <= 0)
+            {
+                transform.position = new Vector3(56, 260, 0);
+                rigid.velocity = new Vector3(0, 0, 0);
+                health = 35;
+                respawn = 50f;
+            }
         }
     }
 
