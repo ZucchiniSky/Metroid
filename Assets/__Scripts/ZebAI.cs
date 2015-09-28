@@ -41,7 +41,6 @@ public class ZebAI : MonoBehaviour {
         int i1 = x + 18;
         int j0 = y - 18;
         int j1 = y + 18;
-        Vector3 vel = rigid.velocity;
 
         if (transform.position.x < i0 - 9 || transform.position.x > i1 + 9
             || transform.position.y < j0 - 9 || transform.position.y > j1 + 9)

@@ -324,6 +324,8 @@ public class Samus : MonoBehaviour {
             {
                 transform.position = new Vector3(56, 260, 0);
                 rigid.velocity = new Vector3(0, 0, 0);
+                CameraScrolling.S.transform.position = transform.position + CameraScrolling.S.offset;
+                CameraScrolling.S.state = CameraState.HORIZONTAL;
                 health = 35;
                 respawn = 50f;
             }
