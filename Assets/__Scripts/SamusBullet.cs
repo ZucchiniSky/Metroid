@@ -17,7 +17,7 @@ public class SamusBullet : MonoBehaviour {
         float dist = (transform.position - bulletOrigin).magnitude;
         if (gameObject.transform.name == "SamusMissile(Clone)")
         {
-            if (dist >= 20f)
+            if (dist >= 40f)
             {
                 Destroy(gameObject);
             }

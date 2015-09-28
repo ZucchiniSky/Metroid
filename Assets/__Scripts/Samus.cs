@@ -26,7 +26,7 @@ public class Samus : MonoBehaviour {
 
     public float speedX = 4f;
     public float speedXStandingJump = 3f;
-    public float speedJump = 10.5f;
+    public float speedJump = 14f;
     public float speedBullet = 10f;
     public bool runningJump = false;
     public bool hasMorph = false;
@@ -44,6 +44,13 @@ public class Samus : MonoBehaviour {
     public float invincibleTimer = 0f;
     public Vector3 hitVel = new Vector3(0, 0, 0);
     public bool hit = false;
+    public Vector3 knockback;
+    public float knockbackYSpeed = 3f;
+    public Collider lastCollision;
+
+    private bool door = false;
+    private bool doorRight = false;
+    private float doorX;
 
     static public Samus S;
 
@@ -137,6 +144,12 @@ public class Samus : MonoBehaviour {
         grounded = Physics.Raycast(checkLoc, Vector3.down, feet.radius, groundPhysicsLayerMask) ||
                     Physics.Raycast(checkLoc + groundedCheckOffset, Vector3.down, feet.radius, groundPhysicsLayerMask) ||
                     Physics.Raycast(checkLoc - groundedCheckOffset, Vector3.down, feet.radius, groundPhysicsLayerMask);
+        //Normalize on ground
+        if (grounded)
+        {
+            runningJump = false;
+            transform.position = new Vector3(transform.position.x, Mathf.Round(transform.position.y * 2f) / 2f);
+        }
 		//check if can unmorph
 		if (isMorph) 
 		{
@@ -150,6 +163,22 @@ public class Samus : MonoBehaviour {
         rigid.constraints = grounded ? noRotYZ : noRotZ; 
 
         Vector3 vel = rigid.velocity;
+
+        if (door)
+        {
+            if (CameraScrolling.S.state != CameraState.TRANSITION)
+            {
+                door = false;
+            } else if (doorRight == doorX > transform.position.x)
+            {
+                vel.x = doorRight ? speedX : -speedX;
+            } else
+            {
+                vel.x = 0f;
+            }
+            rigid.velocity = vel;
+            return;
+        }
 
         //Handle L and R movement
         float speed = grounded ? speedX : (runningJump ? speedX : speedXStandingJump);
@@ -230,11 +259,12 @@ public class Samus : MonoBehaviour {
         //Enemy knockback
         if (hit)
         {
-            rigid.velocity = new Vector3(-rigid.velocity.x, rigid.velocity.y / 2, 0);
+            rigid.velocity = knockback;
             hit = false;
         } else if (invincibleTimer <= 0)
         {
             rigid.velocity = vel;
+            lastCollision = null;
         }
 
 
@@ -258,7 +288,7 @@ public class Samus : MonoBehaviour {
 
         }
 
-        if (face == Facing.R || face == Facing.L)
+        if (face == Facing.R || face == Facing.L || runningJump)
         {
             go.transform.position = bulletOrigin.position;
             go.GetComponent<Rigidbody>().velocity = bulletOrigin.right * speedBullet;
@@ -277,13 +307,13 @@ public class Samus : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy" && invincibleTimer == 0)
+        if (other.tag == "Enemy" && invincibleTimer == 0 && other != lastCollision)
         {
-            /*float xVel = face == Facing.L ? 3f : -3f;
-            hitVel = new Vector3(xVel, 0f, 0f);*/
+            knockback = new Vector3(-speedX * Mathf.Sign(other.attachedRigidbody.position.x - rigid.position.x), knockbackYSpeed + Mathf.Sign(other.attachedRigidbody.position.y - rigid.position.y), 0);
             hit = true;
             health -= 8f;
             invincibleTimer = 30f;
+            lastCollision = other;
         }
     }
 
@@ -329,4 +359,11 @@ public class Samus : MonoBehaviour {
 			}
 		}
 	}
+
+    public void passThroughDoor(float x)
+    {
+        door = true;
+        doorX = x;
+        doorRight = doorX > transform.position.x;
+    }
 }

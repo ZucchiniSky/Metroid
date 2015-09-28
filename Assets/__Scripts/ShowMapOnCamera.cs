@@ -104,8 +104,8 @@ public class ShowMapOnCamera : MonoBehaviour {
             }
         }
 
-        int x = Mathf.RoundToInt(CameraFollow.S.transform.position.x);
-        int y = Mathf.RoundToInt(CameraFollow.S.transform.position.y);
+        int x = Mathf.RoundToInt(CameraScrolling.S.transform.position.x);
+        int y = Mathf.RoundToInt(CameraScrolling.S.transform.position.y);
         
         int i0 = x - screenW2;
         int i1 = x + screenW2;
@@ -135,6 +135,10 @@ public class ShowMapOnCamera : MonoBehaviour {
                         if (MAP_TILES[i,j] == null) {
                             t = GetTile();
 							t.SetTile(i,j);
+                            if (tileNum == 111)
+                            {
+                                CameraScrolling.S.onCreateDoor(i);
+                            }
 							if (tileNum > 900)
 							{
                                 GameObject go = null;
@@ -194,15 +198,12 @@ public class ShowMapOnCamera : MonoBehaviour {
                                     go.transform.localPosition = new Vector3(i, j, 0);
                                     go.name = name;
                                 }
-                                
                             }
 						}
 					}
 				}
 			}
 		}
-		
-		
 	}
 	
 

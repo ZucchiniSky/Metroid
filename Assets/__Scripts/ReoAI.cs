@@ -3,6 +3,7 @@ using System.Collections;
 
 enum reoState
 {
+    NEW,
     PERCHED,
     DIVING,
     HOVERING,
@@ -12,8 +13,8 @@ enum reoState
 public class ReoAI : MonoBehaviour {
 
     public int speedX = 7;
-    public int speedY = 8;
-    private reoState state = reoState.PERCHED;
+    public int speedY = 15;
+    private reoState state = reoState.NEW;
     private Rigidbody rigid;
     private bool right = false;
     private static int initDelay = 50;
@@ -31,8 +32,8 @@ public class ReoAI : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        int x = Mathf.RoundToInt(CameraFollow.S.transform.position.x);
-        int y = Mathf.RoundToInt(CameraFollow.S.transform.position.y);
+        int x = Mathf.RoundToInt(CameraScrolling.S.transform.position.x);
+        int y = Mathf.RoundToInt(CameraScrolling.S.transform.position.y);
         int i0 = x - 18;
         int i1 = x + 18;
         int j0 = y - 18;
@@ -47,8 +48,7 @@ public class ReoAI : MonoBehaviour {
         else if (transform.position.x < i0 || transform.position.x > i1
             || transform.position.y < j0 || transform.position.y > j1)
         {
-            vel.x = 0;
-            vel.y = 0;
+            rigid.velocity = new Vector3(0f, 0f);
         }
         else
         {
@@ -59,6 +59,12 @@ public class ReoAI : MonoBehaviour {
 
             switch (state)
             {
+                case reoState.NEW:
+                    if (Samus.S.transform.position.x - transform.position.x < 5f)
+                    {
+                        state = reoState.PERCHED;
+                    }
+                    break;
                 case reoState.PERCHED:
                     right = Samus.S.transform.position.x > transform.position.x;
 
@@ -72,11 +78,10 @@ public class ReoAI : MonoBehaviour {
                     }
                     break;
                 case reoState.DIVING:
-                    if (Physics.Raycast(transform.position, Vector3.down, 2f, groundPhysicsLayerMask))
+                    if (Physics.Raycast(transform.position, Vector3.down, 1f, groundPhysicsLayerMask))
                     {
                         if (Samus.S.grounded)
                         {
-                            delay = initDelay;
                             state = reoState.HOVERING;
                         } else
                         {
@@ -88,8 +93,7 @@ public class ReoAI : MonoBehaviour {
                     }
                     break;
                 case reoState.HOVERING:
-                    --delay;
-                    if (!Samus.S.grounded || delay <= 0)
+                    if (!Samus.S.grounded)
                     {
                         state = reoState.ASCENDING;
                     } else

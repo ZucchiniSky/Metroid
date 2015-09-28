@@ -4,8 +4,9 @@ using System.Collections;
 public class SkreeAI : MonoBehaviour {
 
     public float hp = 3f;
-    public float speedX = 2f;
-    public float speedY = -7f;
+    public float speedX = 4f;
+    public float speedYAccel = -1f;
+    public float maxYSpeed = -10f;
     public float explodeDelay = 70f;
     public bool dive = false;
     public bool hitFloor = false;
@@ -29,7 +30,7 @@ public class SkreeAI : MonoBehaviour {
         Vector3 vel = rigid.velocity; 
         if (!dive)
         {
-            if(System.Math.Abs(distance) < 5)
+            if(System.Math.Abs(distance) < 3)
             {
                 dive = true;
             }
@@ -47,7 +48,8 @@ public class SkreeAI : MonoBehaviour {
                     vel.x = -speedX;
                 }
                 
-                vel.y = speedY;
+                vel.y += speedYAccel;
+                if (vel.y < maxYSpeed) { vel.y = maxYSpeed; }
                 if (shot >= 0)
                 {
                     shot--;

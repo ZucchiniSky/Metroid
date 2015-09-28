@@ -47,8 +47,8 @@ public class ZoomerAI : MonoBehaviour {
     }
 	
 	void FixedUpdate () {
-        int x = Mathf.RoundToInt(CameraFollow.S.transform.position.x);
-        int y = Mathf.RoundToInt(CameraFollow.S.transform.position.y);
+        int x = Mathf.RoundToInt(CameraScrolling.S.transform.position.x);
+        int y = Mathf.RoundToInt(CameraScrolling.S.transform.position.y);
         int i0 = x - 18;
         int i1 = x + 18;
         int j0 = y - 18;

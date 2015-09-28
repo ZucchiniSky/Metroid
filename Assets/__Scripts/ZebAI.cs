@@ -35,8 +35,8 @@ public class ZebAI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        int x = Mathf.RoundToInt(CameraFollow.S.transform.position.x);
-        int y = Mathf.RoundToInt(CameraFollow.S.transform.position.y);
+        int x = Mathf.RoundToInt(CameraScrolling.S.transform.position.x);
+        int y = Mathf.RoundToInt(CameraScrolling.S.transform.position.y);
         int i0 = x - 18;
         int i1 = x + 18;
         int j0 = y - 18;
@@ -65,7 +65,7 @@ public class ZebAI : MonoBehaviour {
                 }
                 break;
             case zebState.UPWARD:
-                if (gameObject.transform.position.y > Samus.S.transform.position.y)
+                if (gameObject.transform.position.y > Samus.S.transform.position.y + 1)
                 {
                     rigid.velocity = new Vector3(0f, 0f);
                     state = zebState.WAITING;
