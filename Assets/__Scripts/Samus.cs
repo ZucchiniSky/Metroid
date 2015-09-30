@@ -342,7 +342,7 @@ public class Samus : MonoBehaviour {
         {
             go.transform.position = bulletOrigin.position;
             go.GetComponent<Rigidbody>().velocity = bulletOrigin.right * speedBullet;
-            if(face == Facing.L)
+            if(face == Facing.L|| face == Facing.LU)
             {
                 go.transform.rotation = turnLeft;
             }
@@ -460,6 +460,7 @@ public class Samus : MonoBehaviour {
         door = true;
         doorX = x;
         doorRight = doorX > transform.position.x;
+        if (invincibleTimer != -2)
         invincibleTimer = 60f;
     }
 }

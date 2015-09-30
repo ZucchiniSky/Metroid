@@ -58,7 +58,7 @@ public class ZebAI : MonoBehaviour {
         switch (state)
         {
             case zebState.STARTING:
-                if (Mathf.Abs(gameObject.transform.position.x - Samus.S.transform.position.x) < 6)
+                if (Mathf.Abs(gameObject.transform.position.x - Samus.S.transform.position.x) < 3)
                 {
                     state = zebState.UPWARD;
                 }

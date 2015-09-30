@@ -13,8 +13,8 @@ enum reoState
 public class ReoAI : MonoBehaviour {
     public float hp = 4f;
     public float shot = 0f;
-    public int speedX = 7;
-    public int speedY = 15;
+    private int speedX = 3;
+    private int speedY = 15;
     private reoState state = reoState.NEW;
     private Rigidbody rigid;
     private bool right = false;
@@ -61,7 +61,7 @@ public class ReoAI : MonoBehaviour {
             switch (state)
             {
                 case reoState.NEW:
-                    if (Samus.S.transform.position.x - transform.position.x < 5f)
+                    if (Samus.S.transform.position.x - transform.position.x < 3f)
                     {
                         state = reoState.PERCHED;
                     }
