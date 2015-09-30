@@ -17,7 +17,7 @@ public class SkreeAI : MonoBehaviour {
     public Rigidbody rigid;
     public CapsuleCollider body;
     public int groundPhysicsLayerMask;
-    public GameObject energyPrefab, missilePrefab;
+    public GameObject energyPrefab, missilePrefab, skreeExplosionPrefab;
 
     // Use this for initialization
     void Start () {
@@ -75,6 +75,20 @@ public class SkreeAI : MonoBehaviour {
                 explodeDelay--;
                 if (explodeDelay <= 0)
                 {
+
+                    GameObject go1 = Instantiate<GameObject>(skreeExplosionPrefab);
+                    GameObject go2 = Instantiate<GameObject>(skreeExplosionPrefab);
+                    GameObject go3 = Instantiate<GameObject>(skreeExplosionPrefab);
+                    GameObject go4 = Instantiate<GameObject>(skreeExplosionPrefab);
+                    go1.transform.position = transform.position + new Vector3(1, 0, 0);
+                    go2.transform.position = transform.position + new Vector3(-1, 0, 0);
+                    go3.transform.position = transform.position + new Vector3(.5f, .5f, 0);
+                    go4.transform.position = transform.position + new Vector3(-.5f, .5f, 0);
+                    go1.GetComponent<Rigidbody>().velocity = new Vector3(8, 0, 0);
+                    go2.GetComponent<Rigidbody>().velocity = new Vector3(-8, 0, 0);
+                    go3.GetComponent<Rigidbody>().velocity = new Vector3(4, 6, 0);
+                    go4.GetComponent<Rigidbody>().velocity = new Vector3(-4, 6, 0);
+
                     Destroy(gameObject);
                 }
             }
