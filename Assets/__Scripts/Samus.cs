@@ -30,6 +30,9 @@ public class Samus : MonoBehaviour {
     public float speedJump = 14f;
     public float speedBullet = 10f;
     public bool runningJump = false;
+    public bool runJumpPeak = false;
+    public bool runJumpAnim = false;
+    public bool runJumpDir = false;
     public bool hasMorph = false;
     public bool isMorph = false;
     public bool canUnmorph = true;
@@ -122,7 +125,7 @@ public class Samus : MonoBehaviour {
             }
         }
         //Press S to fire the gun
-        if (Input.GetKeyDown(KeyCode.S) && !isMorph && !runningJump)
+        if (Input.GetKeyDown(KeyCode.S) && !isMorph)
         {
             Fire();
         }
@@ -142,7 +145,7 @@ public class Samus : MonoBehaviour {
             invincibleTimer--;
             if(invincibleTimer%2 == 0)
                 spRend.color = Color.white;
-            else
+            else if (!door)
                 spRend.color = Color.clear;
         }
         //Check to see whether we're grounded or not
@@ -198,15 +201,9 @@ public class Samus : MonoBehaviour {
             vel.x = speed;
             face = Facing.R;
         }
-        else
+        else if (grounded || runJumpAnim)
         {
-            if (!grounded && runningJump)
-            {
-                vel.x *= 9/10f;
-            } else
-            {
-                vel.x = 0;
-            }
+            vel.x *= 8/10f;
         }
         //Raises and lowers gun
         if(Input.GetKey(KeyCode.UpArrow))
@@ -218,10 +215,22 @@ public class Samus : MonoBehaviour {
 			    samusFull.height = 1.8f;
 			    samusFull.center = new Vector3(0f, 1f,0f);
 			}
+            if (runningJump && !runJumpPeak)
+            {
+                runJumpAnim = false;
+            }
         }
         else
         {
             face = Facing.D;
+            if (runningJump && !runJumpPeak)
+            {
+                runJumpAnim = true;
+            }
+        }
+        if (runningJump && !runJumpPeak && vel.y < 0)
+        {
+            runJumpPeak = true;
         }
 		//Morph ball
 		if (Input.GetKeyDown(KeyCode.DownArrow) && grounded && hasMorph)
@@ -243,13 +252,11 @@ public class Samus : MonoBehaviour {
 			{
 				rigid.constraints = noRotZ; // unlocks Y movement in Rigidbody
             	vel.y = speedJump;
-                if (vel.x != 0)
-                {
-                    runningJump = true;
-                } else
-                {
-                    runningJump = false;
-                }
+                bool shouldRunningJump = vel.x != 0;
+                runningJump = shouldRunningJump;
+                runJumpPeak = false;
+                runJumpAnim = shouldRunningJump;
+                runJumpDir = vel.x > 0;
 			}
             jump = false;
         }
@@ -261,6 +268,10 @@ public class Samus : MonoBehaviour {
                 vel.y = 0;
             }
             jumpCancel = false;
+        }
+        if (Mathf.Abs(vel.x) < .5f)
+        {
+            vel.x = 0;
         }
         //Enemy knockback
         if (respawn > 0)
@@ -277,12 +288,14 @@ public class Samus : MonoBehaviour {
             rigid.velocity = vel;
             lastCollision = null;
         }
-
-
     }  
 
     void Fire()
     {
+        if (runningJump && runJumpPeak)
+        {
+            runJumpAnim = false;
+        }
         GameObject go = null;
         if (usingMissiles && missiles <= 0)
         {
@@ -365,29 +378,35 @@ public class Samus : MonoBehaviour {
             if (isMorph) {
                 spRend.sprite = spMorph;
             }
-            else if(runningJump){
-                switch (runJumpCount)
+            else if (runningJump){
+                if (runJumpAnim)
                 {
-                    case 0:
-                        spRend.sprite = spRunjumpR;
-                        break;
-                    case 1:
-                        spRend.sprite = spRunjumpU;
-                        break;
-                    case 2:
-                        spRend.sprite = spRunjumpL;
-                        break;
-                    case 3:
-                        spRend.sprite = spRunjumpD;
-                        break;
-                    default:
-                        spRend.sprite = spRunjumpR;
-                        break;
-                }
-                runJumpCount++;
-                if(runJumpCount >= 4)
+                    switch (runJumpCount)
+                    {
+                        case 0:
+                            spRend.sprite = spRunjumpR;
+                            break;
+                        case 1:
+                            spRend.sprite = spRunjumpU;
+                            break;
+                        case 2:
+                            spRend.sprite = spRunjumpL;
+                            break;
+                        case 3:
+                            spRend.sprite = spRunjumpD;
+                            break;
+                        default:
+                            spRend.sprite = spRunjumpR;
+                            break;
+                    }
+                    runJumpCount++;
+                    if(runJumpCount >= 4)
+                    {
+                        runJumpCount = 0;
+                    }
+                } else
                 {
-                    runJumpCount = 0;
+                    spRend.sprite = spRight;
                 }
             }
             else {
@@ -415,5 +434,6 @@ public class Samus : MonoBehaviour {
         door = true;
         doorX = x;
         doorRight = doorX > transform.position.x;
+        invincibleTimer = 60f;
     }
 }
