@@ -234,7 +234,7 @@ public class ZoomerAI : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Bullet" || other.tag == "Missile")
+        if (other.tag == "Bullet" || other.tag == "Missile" || other.tag == "chargedShot")
         {
             if (other.tag == "Bullet")
                 hp--;

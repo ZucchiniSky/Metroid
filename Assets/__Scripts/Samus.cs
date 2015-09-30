@@ -20,7 +20,7 @@ public class Samus : MonoBehaviour {
     //These are variables set in the Inspector
     public Facing _face = Facing.R;
     public Sprite spRight, spUp, spMorph,
-        spRunjumpR, spRunjumpL, spRunjumpU, spRunjumpD;
+        spRunjumpR, spRunjumpL, spRunjumpU, spRunjumpD, chargeSprite;
     public GameObject bulletPrefab, missilePrefab;
     public Transform bulletOrigin, bulletOriginUp;
     public bool ____________;
@@ -38,6 +38,9 @@ public class Samus : MonoBehaviour {
     public bool canUnmorph = true;
     public bool hasMissiles = false;
     public bool usingMissiles = false;
+    private bool hasChargeshot = true;
+    private float charge = 1f;
+
     public float missiles = 0f;
     public float maxMissiles = 0f;
     public bool hasLongBeam = false;
@@ -107,6 +110,7 @@ public class Samus : MonoBehaviour {
             if (!usingMissiles && missiles > 0)
             {
                 usingMissiles = true;
+
             }
             else if (usingMissiles)
             {
@@ -127,9 +131,25 @@ public class Samus : MonoBehaviour {
         //Press S to fire the gun
         if (Input.GetKeyDown(KeyCode.S) && !isMorph)
         {
-            Fire();
+            if (!hasChargeshot || usingMissiles)
+            {
+                Fire();
+            }
+            else
+            {
+                charge += .1f;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyUp(KeyCode.S) && !isMorph && hasChargeshot && !usingMissiles)
+        {
+            if (!usingMissiles)
+            { 
+                Fire();
+            }
+            spRend.color = Color.white;
+            charge = 1;
+        }
+            if (Input.GetKeyDown(KeyCode.A))
         {
             jump = true;
         }
@@ -165,6 +185,34 @@ public class Samus : MonoBehaviour {
                 spRend.color = Color.white;
             else if (!door)
                 spRend.color = Color.clear;
+        }
+        if (charge > 1 && charge < 10)
+        {
+            charge += .1f;
+            if (charge > 3)
+            {
+
+                if ((int)(charge * 10) % 2 == 0)
+                {
+                    spRend.color = Color.white;
+                }
+                else
+                {
+                    spRend.color = Color.blue;
+                }
+            }
+        }
+        else if(charge >= 10)
+        {
+            charge += .1f;
+            if ((int)(charge * 10) % 2 == 0)
+            {
+                spRend.color = Color.white;
+            }
+            else
+            {
+                spRend.color = Color.magenta;
+            }
         }
         //Check to see whether we're grounded or not
         Vector3 checkLoc = feet.transform.position + Vector3.up * (feet.radius * 0.9f);
@@ -335,7 +383,17 @@ public class Samus : MonoBehaviour {
         else
         {
             go = Instantiate<GameObject>(bulletPrefab);
-
+            if (charge > 3)
+            {
+                if (charge > 10)
+                { 
+                    charge = 10;
+                }
+                go.transform.localScale = new Vector3(charge/3, charge/3, 1);
+                go.GetComponent<SpriteRenderer>().sprite = chargeSprite;
+                go.tag = "chargedShot";
+                go.GetComponent<SamusBullet>().charge = charge;
+            }
         }
 
         if (face == Facing.R || face == Facing.L || runningJump)
