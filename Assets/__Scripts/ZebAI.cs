@@ -12,6 +12,9 @@ enum zebState
 public class ZebAI : MonoBehaviour {
     public float speedUp = 5f;
     public float speedAir = 10f;
+    public int originX;
+    public int originY;
+    public GameObject zebPrefab;
     private zebState state = zebState.STARTING;
     private int delay = 10;
     private Rigidbody rigid;
@@ -23,15 +26,22 @@ public class ZebAI : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rigid = GetComponent<Rigidbody>();
+        checkDir();
+	}
+
+    void checkDir()
+    {
         if (Samus.S.transform.position.x < gameObject.transform.position.x)
         {
             right = false;
             transform.rotation = Quaternion.Euler(0, 180, 0);
-        } else
+        }
+        else
         {
             right = true;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-	}
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -45,6 +55,7 @@ public class ZebAI : MonoBehaviour {
         if (transform.position.x < i0 - 9 || transform.position.x > i1 + 9
             || transform.position.y < j0 - 9 || transform.position.y > j1 + 9)
         {
+            spawnNext();
             Destroy(gameObject);
         }
 
@@ -58,6 +69,7 @@ public class ZebAI : MonoBehaviour {
         switch (state)
         {
             case zebState.STARTING:
+                checkDir();
                 if (Mathf.Abs(gameObject.transform.position.x - Samus.S.transform.position.x) < 3)
                 {
                     state = zebState.UPWARD;
@@ -105,8 +117,17 @@ public class ZebAI : MonoBehaviour {
                     GameObject go = Instantiate(missilePrefab);
                     go.transform.position = transform.position;
                 }
+                spawnNext();
                 Destroy(gameObject);
             }
         }
+    }
+
+    void spawnNext()
+    {
+        GameObject go = Instantiate(zebPrefab);
+        go.transform.SetParent(ShowMapOnCamera.S.mapAnchor, true);
+        go.transform.localPosition = new Vector3(originX, originY, 0);
+        go.name = name;
     }
 }

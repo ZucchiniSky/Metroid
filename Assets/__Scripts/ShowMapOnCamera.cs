@@ -176,6 +176,9 @@ public class ShowMapOnCamera : MonoBehaviour {
                                 else if (tileNum == 906 && GameObject.Find("/" + mapAnchor.name + "/" + name) == null)
                                 {
                                     go = Instantiate(zebPrefab);
+                                    ZebAI zebAi = go.GetComponent<ZebAI>();
+                                    zebAi.originX = i;
+                                    zebAi.originY = j;
                                 }
                                 else if (tileNum == 950 && Items[0] == false)
 								{
