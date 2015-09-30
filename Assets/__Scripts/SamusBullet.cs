@@ -14,6 +14,7 @@ public class SamusBullet : MonoBehaviour {
     }
     void FixedUpdate()
     {
+        
         float dist = (transform.position - bulletOrigin).magnitude;
         if (gameObject.transform.name == "SamusMissile(Clone)")
         {

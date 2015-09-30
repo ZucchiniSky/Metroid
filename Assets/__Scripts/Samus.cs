@@ -39,7 +39,7 @@ public class Samus : MonoBehaviour {
     public float maxMissiles = 0f;
     public bool hasLongBeam = false;
     public float bulletStopDist = 3f;
-    public float health = 35f;
+    public float health = 30f;
     public bool jump = false;
     public bool jumpCancel = false;
     public float invincibleTimer = 0f;
@@ -133,6 +133,24 @@ public class Samus : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.A))
         {
             jumpCancel = true;
+        }
+        //Press 2 to get stuff
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            hasMissiles = true;
+            maxMissiles = 100;
+            missiles = 100;
+            hasLongBeam = true;
+            hasMorph = true;
+        }
+        //press 1 to take away
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            hasMissiles = false;
+            maxMissiles = 0;
+            missiles = 0;
+            hasLongBeam = false;
+            hasMorph = false;
         }
     }
     // FixedUpdate is called once per physics engine update (50fps)
@@ -283,6 +301,14 @@ public class Samus : MonoBehaviour {
 
     void Fire()
     {
+        if (hasLongBeam)
+        {
+            bulletStopDist = 40f;
+        }
+        else
+        {
+            bulletStopDist = 3f;
+        }
         GameObject go = null;
         if (usingMissiles && missiles <= 0)
         {
@@ -331,7 +357,7 @@ public class Samus : MonoBehaviour {
                 rigid.velocity = new Vector3(0, 0, 0);
                 CameraScrolling.S.ResetCamera();
                 ShowMapOnCamera.S.RedrawScreen();
-                health = 35;
+                health = 30;
                 respawn = 50f;
             }
         }

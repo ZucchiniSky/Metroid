@@ -7,19 +7,27 @@ public class MissileManager : MonoBehaviour {
 	void Start () {
 	
 	}
-
-    // Update is called once per frame
-    void Update()
+    
+    void FixedUpdate()
     {
         GUIText gt = this.GetComponent<GUIText>();
         if (Samus.S.hasMissiles)
         {
             
             gt.text = "M " + ("000" + Samus.S.missiles).Substring((""+Samus.S.missiles).Length);
+            if (Samus.S.usingMissiles)
+            {
+                gt.color = Color.yellow;
+            }
+            else
+            {
+                gt.color = Color.white;
+            }
         }
         else
         {
             gt.text = "";
         }
+        
     }
 }

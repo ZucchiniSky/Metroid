@@ -8,7 +8,6 @@ public class LongBeamPowerUp : MonoBehaviour {
         if (other.tag == "Player")
         {
             Samus.S.hasLongBeam = true;
-            Samus.S.bulletStopDist = 40f;
             Destroy(gameObject);
         }
     }
