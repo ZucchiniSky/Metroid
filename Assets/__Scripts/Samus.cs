@@ -25,8 +25,8 @@ public class Samus : MonoBehaviour {
     public Transform bulletOrigin, bulletOriginUp;
     public bool ____________;
 
-    public float speedX = 4f;
-    public float speedXStandingJump = 3f;
+    public float speedX = 6f;
+    public float speedXStandingJump = 4f;
     public float speedJump = 14f;
     public float speedBullet = 10f;
     public bool runningJump = false;
@@ -165,7 +165,7 @@ public class Samus : MonoBehaviour {
         {
             onLava = false;
         }
-        speedX = onLava ? 2f : 4f;
+        speedX = onLava ? 3f : 6f;
         if (onLava)
         {
             if (lavaAnim % 15 == 0)
