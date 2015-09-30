@@ -55,6 +55,9 @@ public class Samus : MonoBehaviour {
     private bool door = false;
     private bool doorRight = false;
     private float doorX;
+    private bool onLava = false;
+    private int lavaCounter = 0;
+    private int lavaAnim = 0;
     
     public float respawn = 0f;
     static public Samus S;
@@ -158,6 +161,32 @@ public class Samus : MonoBehaviour {
     }
     // FixedUpdate is called once per physics engine update (50fps)
     void FixedUpdate () {
+        if (invincibleTimer == -2 || (onLava && lavaCounter <= 0 && !grounded))
+        {
+            onLava = false;
+        }
+        speedX = onLava ? 2f : 4f;
+        if (onLava)
+        {
+            if (lavaAnim % 15 == 0)
+            {
+                health--;
+                checkHealth();
+            }
+            lavaAnim++;
+            if (grounded)
+            {
+                lavaCounter = 10;
+            }
+            if (lavaAnim % 2 == 0)
+                spRend.color = Color.white;
+            else
+                spRend.color = Color.clear;
+            lavaCounter--;
+        } else
+        {
+                spRend.color = Color.white;
+        }
         if (invincibleTimer > 0)
         {
             invincibleTimer--;
@@ -364,15 +393,7 @@ public class Samus : MonoBehaviour {
             health -= 8f;
             invincibleTimer = 30f;
             lastCollision = other;
-            if (health <= 0)
-            {
-                transform.position = new Vector3(56, 260, 0);
-                rigid.velocity = new Vector3(0, 0, 0);
-                CameraScrolling.S.ResetCamera();
-                ShowMapOnCamera.S.RedrawScreen();
-                health = 30;
-                respawn = 50f;
-            }
+            checkHealth();
         }
     }
 
@@ -461,6 +482,30 @@ public class Samus : MonoBehaviour {
         doorX = x;
         doorRight = doorX > transform.position.x;
         if (invincibleTimer != -2)
-        invincibleTimer = 60f;
+            invincibleTimer = 60f;
+    }
+
+    public void onLavaCollision()
+    {
+        if (!onLava)
+        {
+            onLava = true;
+            lavaCounter = 10;
+            lavaAnim = 0;
+        }
+    }
+
+    void checkHealth()
+    {
+        if (health <= 0)
+        {
+            transform.position = new Vector3(56, 260, 0);
+            rigid.velocity = new Vector3(0, 0, 0);
+            CameraScrolling.S.ResetCamera();
+            ShowMapOnCamera.S.RedrawScreen();
+            health = 30;
+            onLava = false;
+            respawn = 50f;
+        }
     }
 }
