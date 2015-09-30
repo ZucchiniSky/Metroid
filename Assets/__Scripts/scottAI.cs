@@ -35,19 +35,44 @@ public class scottAI : MonoBehaviour {
     {
         if (other.tag == "chargedShot" )
         {
+            rigid.constraints = RigidbodyConstraints.FreezeRotation;
             float charge = other.GetComponent<SamusBullet>().charge;
             Vector3 vel = rigid.velocity;
-            if(other.GetComponent<Rigidbody>().velocity.x > 0)
+            float bulletVel = other.GetComponent<Rigidbody>().velocity.x;
+            bool right;
+            if (bulletVel != 0)
             {
-                vel.x += charge * .7f;
+                right = bulletVel > 0;
+            } else
+            {
+                right = other.transform.position.x < transform.position.x;
+            }
+            if (right)
+            {
+                vel.x += charge * 1f;
             }
             else
             {
-                vel.x -= charge * .7f;
+                vel.x -= charge * 1f;
             }
             rigid.velocity = vel;
         }
 
 
     }
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            rigid.constraints = RigidbodyConstraints.FreezeAll;
+        }
+    }
+    void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            rigid.constraints = RigidbodyConstraints.FreezeAll;
+        }
+    }
+
 }

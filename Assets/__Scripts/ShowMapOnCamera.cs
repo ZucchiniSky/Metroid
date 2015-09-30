@@ -37,6 +37,8 @@ public class ShowMapOnCamera : MonoBehaviour {
     public Transform        mapAnchor;
     public int              spriteSheetW;
 
+    private HashSet<int> missilePackX = new HashSet<int>();
+
 
     void Awake() {
         S = this;
@@ -187,10 +189,10 @@ public class ShowMapOnCamera : MonoBehaviour {
 									go = Instantiate(morphBallPowerupPrefab);
                                     Items[0] = true;
 								}
-                                else if(tileNum == 951 && Items[1] == false)
+                                else if(tileNum == 951 && !missilePackX.Contains(i))
                                 {
                                     go = Instantiate(MissileItemPrefab);
-                                    Items[1] = true;
+                                    missilePackX.Add(i);
                                 }
                                 else if(tileNum == 952 && Items[2] == false)
                                 {
