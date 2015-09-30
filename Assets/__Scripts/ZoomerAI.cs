@@ -54,7 +54,7 @@ public class ZoomerAI : MonoBehaviour {
         int j0 = y - 18;
         int j1 = y + 18;
         Vector3 vel = rigid.velocity;
-
+        GetComponent<SpriteRenderer>().color = Color.white;
         if (transform.position.x < i0 - 9 || transform.position.x > i1 + 9
             || transform.position.y < j0 - 9 || transform.position.y > j1 + 9)
         {
@@ -216,8 +216,9 @@ public class ZoomerAI : MonoBehaviour {
                     break;
             }
         }
-        if (shot >= 0)
+        if (shot > 0)
         {
+            GetComponent<SpriteRenderer>().color = Color.red;
             shot--;
             vel.x = 0;
             vel.y = 0;
@@ -239,7 +240,7 @@ public class ZoomerAI : MonoBehaviour {
                 hp--;
             else
                 hp = 0;
-            shot = 3f;
+            shot = 5f;
             if (hp <= 0)
             {
                 int initDir = (int)Mathf.Round(Random.Range(0, 3));

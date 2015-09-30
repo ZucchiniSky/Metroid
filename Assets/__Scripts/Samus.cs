@@ -19,7 +19,8 @@ public enum Facing
 public class Samus : MonoBehaviour {
     //These are variables set in the Inspector
     public Facing _face = Facing.R;
-    public Sprite spRight, spUp, spMorph;
+    public Sprite spRight, spUp, spMorph,
+        spRunjumpR, spRunjumpL, spRunjumpU, spRunjumpD;
     public GameObject bulletPrefab, missilePrefab;
     public Transform bulletOrigin, bulletOriginUp;
     public bool ____________;
@@ -47,7 +48,7 @@ public class Samus : MonoBehaviour {
     public Vector3 knockback;
     public float knockbackYSpeed = 3f;
     public Collider lastCollision;
-
+    public int runJumpCount = 0;
     private bool door = false;
     private bool doorRight = false;
     private float doorX;
@@ -121,7 +122,7 @@ public class Samus : MonoBehaviour {
             }
         }
         //Press S to fire the gun
-        if (Input.GetKeyDown(KeyCode.S) && !isMorph)
+        if (Input.GetKeyDown(KeyCode.S) && !isMorph && !runningJump)
         {
             Fire();
         }
@@ -139,6 +140,10 @@ public class Samus : MonoBehaviour {
         if (invincibleTimer > 0)
         {
             invincibleTimer--;
+            if(invincibleTimer%2 == 0)
+                spRend.color = Color.white;
+            else
+                spRend.color = Color.clear;
         }
         //Check to see whether we're grounded or not
         Vector3 checkLoc = feet.transform.position + Vector3.up * (feet.radius * 0.9f);
@@ -356,23 +361,53 @@ public class Samus : MonoBehaviour {
 				_face = value;
 				break;
 			}
-			//change the sprite and rotation
-			if (isMorph) {
-				spRend.sprite = spMorph;
-			} else {
-				if (_face == Facing.R || _face == Facing.L) {
-					spRend.sprite = spRight;
-				} else {
-					spRend.sprite = spUp;
-				}
+            //change the sprite and rotation
+            if (isMorph) {
+                spRend.sprite = spMorph;
+            }
+            else if(runningJump){
+                switch (runJumpCount)
+                {
+                    case 0:
+                        spRend.sprite = spRunjumpR;
+                        break;
+                    case 1:
+                        spRend.sprite = spRunjumpU;
+                        break;
+                    case 2:
+                        spRend.sprite = spRunjumpL;
+                        break;
+                    case 3:
+                        spRend.sprite = spRunjumpD;
+                        break;
+                    default:
+                        spRend.sprite = spRunjumpR;
+                        break;
+                }
+                runJumpCount++;
+                if(runJumpCount >= 4)
+                {
+                    runJumpCount = 0;
+                }
+            }
+            else {
+                if (_face == Facing.R || _face == Facing.L) {
+                    spRend.sprite = spRight;
+                } else {
+                    spRend.sprite = spUp;
+                }
 
-				if (_face == Facing.R || _face == Facing.RU) {
-					transform.rotation = Quaternion.identity;
-				} else {
-					transform.rotation = turnLeft;
-				}
-			}
-		}
+                
+            }
+            if (_face == Facing.R || _face == Facing.RU)
+            {
+                transform.rotation = Quaternion.identity;
+            }
+            else
+            {
+                transform.rotation = turnLeft;
+            }
+        }
 	}
 
     public void passThroughDoor(float x)

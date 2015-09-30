@@ -12,6 +12,7 @@ public class SkreeAI : MonoBehaviour {
     public bool hitFloor = false;
     
     public bool _______;
+    
     public float shot = 0;
     public Rigidbody rigid;
     public CapsuleCollider body;
@@ -27,6 +28,7 @@ public class SkreeAI : MonoBehaviour {
 	
 	void FixedUpdate () {
         float distance = Samus.S.transform.position.x - transform.position.x;
+        GetComponent<SpriteRenderer>().color = Color.white;
         Vector3 vel = rigid.velocity; 
         if (!dive)
         {
@@ -50,8 +52,9 @@ public class SkreeAI : MonoBehaviour {
                 
                 vel.y += speedYAccel;
                 if (vel.y < maxYSpeed) { vel.y = maxYSpeed; }
-                if (shot >= 0)
+                if (shot > 0)
                 {
+                    GetComponent<SpriteRenderer>().color = Color.red;
                     shot--;
                     vel.x = 0;
                     vel.y = 0;
@@ -68,6 +71,7 @@ public class SkreeAI : MonoBehaviour {
             }
             else
             {
+
                 explodeDelay--;
                 if (explodeDelay <= 0)
                 {

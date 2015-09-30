@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6ba5473dcb3817a41bfdd3d2245d2de6
-timeCreated: 1442987477
+timeCreated: 1443574376
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,7 @@ TextureImporter:
     21300008: reo_descent
     21300010: reo_ascent
     21300012: zeb
+    21300014: Metroidenemies_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -127,6 +128,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Metroidenemies_0
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 251
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 1, y: 1, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

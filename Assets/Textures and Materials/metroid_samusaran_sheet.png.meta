@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ce94f51f558bd47eca28c0601d6aa21e
-timeCreated: 1442895326
+timeCreated: 1443576434
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -561,7 +561,7 @@ TextureImporter:
     - name: metroid_samusaran_sheet_17
       rect:
         serializedVersion: 2
-        x: 322
+        x: 324
         y: 1233
         width: 22
         height: 34
@@ -791,7 +791,7 @@ TextureImporter:
     - name: metroid_samusaran_sheet_40
       rect:
         serializedVersion: 2
-        x: 32
+        x: 31
         y: 1122
         width: 21
         height: 17
@@ -875,8 +875,8 @@ TextureImporter:
         y: 1118
         width: 16
         height: 25
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: metroid_samusaran_sheet_49
       rect:
