@@ -36,8 +36,19 @@ public class CameraScrolling : MonoBehaviour
 
         cam = GetComponent<Camera>();
 
+        ResetCamera();
+    }
+
+    public void ResetCamera()
+    {
+        state = CameraState.HORIZONTAL;
+        lastState = CameraState.HORIZONTAL;
         // Initially position the camera exactly over the poi - JB
         transform.position = poi.position + offset;
+        doorsXList.Clear();
+        minDoor = int.MinValue;
+        maxDoor = int.MaxValue;
+        numDoors = 0;
     }
 
     // Update is called once per frame - JB
@@ -126,7 +137,8 @@ public class CameraScrolling : MonoBehaviour
             {
                 maxDoor = doorsXList[index + 1];
             }
-        } else
+        }
+        else
         {
             maxDoor = x - 1;
             minDoor = int.MinValue;
@@ -139,6 +151,7 @@ public class CameraScrolling : MonoBehaviour
         if (lastState == CameraState.HORIZONTAL)
         {
             doorsXList.Clear();
+            numDoors = 0;
             doorsXList.Add(minDoor);
             doorsXList.Add(minDoor - 1);
             doorsXList.Add(maxDoor);

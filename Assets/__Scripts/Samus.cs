@@ -263,7 +263,7 @@ public class Samus : MonoBehaviour {
             jumpCancel = false;
         }
         //Enemy knockback
-        if(respawn > 0)
+        if (respawn > 0)
         {
             rigid.velocity = new Vector3(0, 0, 0);
             respawn--;
@@ -329,8 +329,8 @@ public class Samus : MonoBehaviour {
             {
                 transform.position = new Vector3(56, 260, 0);
                 rigid.velocity = new Vector3(0, 0, 0);
-                CameraScrolling.S.transform.position = transform.position + CameraScrolling.S.offset;
-                CameraScrolling.S.state = CameraState.HORIZONTAL;
+                CameraScrolling.S.ResetCamera();
+                ShowMapOnCamera.S.RedrawScreen();
                 health = 35;
                 respawn = 50f;
             }
