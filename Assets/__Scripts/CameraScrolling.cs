@@ -89,7 +89,7 @@ public class CameraScrolling : MonoBehaviour
         if (state != CameraState.TRANSITION && Mathf.Abs(poi.position.x - transform.position.x) > (screenWidth / 2 - 1))
         {
             scrollingRight = poi.position.x > transform.position.x;
-            Samus.S.passThroughDoor(scrollingRight ? (float)maxDoor + 2.1f : (float)minDoor - 2.1f);
+            Samus.S.passThroughDoor(scrollingRight ? (float)maxDoor + 3f : (float)minDoor - 3f);
             onEnterDoor(scrollingRight ? maxDoor : minDoor);
         }
         position.x = RoundToNearestPixel(position.x, cam);
