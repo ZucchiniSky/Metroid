@@ -77,7 +77,12 @@ public class RipperAI : MonoBehaviour {
     {
         if (other.tag == "chargedShot")
         {
-                int initDir = (int)Mathf.Round(Random.Range(0, 3));
+            float charge = other.GetComponent<SamusBullet>().charge;
+            if (charge < 10f)
+            {
+                return;
+            }
+            int initDir = (int)Mathf.Round(Random.Range(0, 3));
                 if (initDir == 0)
                 {
                     GameObject go = Instantiate(energyPrefab);

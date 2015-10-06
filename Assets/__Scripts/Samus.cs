@@ -58,6 +58,8 @@ public class Samus : MonoBehaviour {
     private bool door = false;
     private bool doorRight = false;
     private float doorX;
+
+    private float chargeConstant = .3f;
     
     public float respawn = 0f;
     static public Samus S;
@@ -137,7 +139,7 @@ public class Samus : MonoBehaviour {
             }
             else
             {
-                charge += .1f;
+                charge += chargeConstant;
             }
         }
         if (Input.GetKeyUp(KeyCode.S) && !isMorph && hasChargeshot && !usingMissiles)
@@ -188,7 +190,7 @@ public class Samus : MonoBehaviour {
         }
         if (charge > 1 && charge < 10)
         {
-            charge += .1f;
+            charge += chargeConstant;
             if (charge > 3)
             {
 
@@ -204,7 +206,7 @@ public class Samus : MonoBehaviour {
         }
         else if(charge >= 10)
         {
-            charge += .1f;
+            charge += chargeConstant;
             if ((int)(charge * 10) % 2 == 0)
             {
                 spRend.color = Color.white;
@@ -269,7 +271,7 @@ public class Samus : MonoBehaviour {
         }
         else if (grounded || runJumpAnim)
         {
-            vel.x *= 8/10f;
+            vel.x *= 5/10f;
         }
         //Raises and lowers gun
         if(Input.GetKey(KeyCode.UpArrow))

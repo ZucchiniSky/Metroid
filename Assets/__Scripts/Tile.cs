@@ -83,7 +83,7 @@ public class Tile : MonoBehaviour {
     {
         if (ShowMapOnCamera.S == null) return;
 
-        if (other.gameObject.tag == "Bullet" || other.gameObject.tag == "Missile")
+        if (other.gameObject.tag == "Bullet" || other.gameObject.tag == "Missile" || other.gameObject.tag == "chargedShot")
         {
             if ((destructibility >= '3' && destructibility <= '8') || (other.gameObject.tag == "Missile" && destructibility >= 'A' && destructibility <= 'F'))
             {
