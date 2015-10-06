@@ -250,7 +250,7 @@ public class Samus : MonoBehaviour {
         }
         else if (grounded || runJumpAnim)
         {
-            vel.x *= 8/10f;
+            vel.x *= 5/10f;
         }
         //Raises and lowers gun
         if(Input.GetKey(KeyCode.UpArrow))
