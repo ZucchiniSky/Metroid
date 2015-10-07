@@ -27,7 +27,8 @@ public class ShowMapOnCamera : MonoBehaviour {
     public Vector2[]        stopPoints;
 
 	public GameObject morphBallPowerupPrefab, MissileItemPrefab, LongBeamPrefab;
-    public GameObject zoomerPrefab, zoomerRedPrefab, ripperPrefab, skreePrefab, zebPrefab, reoPrefab;
+    public GameObject zoomerPrefab, zoomerRedPrefab, ripperPrefab, skreePrefab, zebPrefab, reoPrefab
+        , scottPrefab;
 
     public bool             ________________;
     public int              w, h;
@@ -35,6 +36,8 @@ public class ShowMapOnCamera : MonoBehaviour {
     public int              screenW, screenH, screenW2, screenH2;
     public Transform        mapAnchor;
     public int              spriteSheetW;
+
+    private HashSet<int> missilePackX = new HashSet<int>();
 
 
     void Awake() {
@@ -180,15 +183,19 @@ public class ShowMapOnCamera : MonoBehaviour {
                                     zebAi.originX = i;
                                     zebAi.originY = j;
                                 }
+                                else if (tileNum == 907 && GameObject.Find("/" + mapAnchor.name + "/" + name) == null)
+                                {
+                                    go = Instantiate(scottPrefab);
+                                }
                                 else if (tileNum == 950 && Items[0] == false)
 								{
 									go = Instantiate(morphBallPowerupPrefab);
                                     Items[0] = true;
 								}
-                                else if(tileNum == 951 && Items[1] == false)
+                                else if(tileNum == 951 && !missilePackX.Contains(i))
                                 {
                                     go = Instantiate(MissileItemPrefab);
-                                    Items[1] = true;
+                                    missilePackX.Add(i);
                                 }
                                 else if(tileNum == 952 && Items[2] == false)
                                 {

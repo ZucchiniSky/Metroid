@@ -12,6 +12,7 @@ public class RipperAI : MonoBehaviour {
     public Rigidbody rigid;
     public CapsuleCollider body;
     public int groundPhysicsLayerMask;
+    public GameObject energyPrefab, missilePrefab;
     Quaternion turnLeft = Quaternion.Euler(0, 180, 0);
     // Use this for initialization
     void Start () {
@@ -72,4 +73,27 @@ public class RipperAI : MonoBehaviour {
         vel.x = velX;
         rigid.velocity = vel;
     }
-}
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "chargedShot")
+        {
+            float charge = other.GetComponent<SamusBullet>().charge;
+            if (charge < 10f)
+            {
+                return;
+            }
+            int initDir = (int)Mathf.Round(Random.Range(0, 3));
+                if (initDir == 0)
+                {
+                    GameObject go = Instantiate(energyPrefab);
+                    go.transform.position = transform.position;
+                }
+                else if (initDir == 1 && Samus.S.hasMissiles)
+                {
+                    GameObject go = Instantiate(missilePrefab);
+                    go.transform.position = transform.position;
+                }
+                Destroy(gameObject);
+            }
+        }
+    }

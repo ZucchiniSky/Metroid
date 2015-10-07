@@ -5,7 +5,7 @@ using System.Collections;
 //2. Stop the bullet if it hits the Ground or enemy or something else
 
 public class SamusBullet : MonoBehaviour {
-    
+    public float charge = 0f;
     Vector3 bulletOrigin; 
 
     void Start()
@@ -29,7 +29,6 @@ public class SamusBullet : MonoBehaviour {
         }
         
     }
-
 	void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
