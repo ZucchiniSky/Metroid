@@ -19,7 +19,7 @@ public class ZoomerAI : MonoBehaviour {
     public int hp;
     public bool _______;
     public float shot = 0f;
-    public float speed = 2f;
+    private float speed = 4f;
     public direction dir = direction.DOWNRIGHT;
     public Rigidbody rigid;
     public CapsuleCollider body;

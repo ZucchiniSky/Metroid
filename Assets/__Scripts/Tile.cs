@@ -165,6 +165,14 @@ public class Tile : MonoBehaviour {
         }
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Player" && tileNum == 151)
+        {
+            Samus.S.onLavaCollision();
+        }
+    }
+
 	// Arrange the collider for this tile
 	void SetCollider() {
         
