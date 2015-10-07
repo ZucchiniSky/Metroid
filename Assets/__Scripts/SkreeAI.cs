@@ -32,7 +32,7 @@ public class SkreeAI : MonoBehaviour {
         Vector3 vel = rigid.velocity; 
         if (!dive)
         {
-            if(System.Math.Abs(distance) < 3)
+            if(System.Math.Abs(distance) < 3 && Samus.S.transform.position.y < transform.position.y)
             {
                 dive = true;
             }

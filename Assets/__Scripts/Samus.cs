@@ -62,6 +62,10 @@ public class Samus : MonoBehaviour {
     private int lavaCounter = 0;
     private int lavaAnim = 0;
 
+    private bool isOnPlatform = false;
+    private int lastPlatformDir = 0;
+    private MovingPlatformAI platform;
+
     private float chargeConstant = .2f;
     
     public float respawn = 0f;
@@ -255,6 +259,9 @@ public class Samus : MonoBehaviour {
         {
             runningJump = false;
             transform.position = new Vector3(transform.position.x, Mathf.Round(transform.position.y * 2f) / 2f);
+        } else
+        {
+            offPlatform();
         }
 		//check if can unmorph
 		if (isMorph) 
@@ -269,6 +276,11 @@ public class Samus : MonoBehaviour {
         rigid.constraints = grounded ? noRotYZ : noRotZ; 
 
         Vector3 vel = rigid.velocity;
+        
+        if (lastPlatformDir != 0)
+        {
+            vel -= new Vector3(lastPlatformDir * MovingPlatformAI.speed, 0f, 0f);
+        }
 
         if (door)
         {
@@ -370,18 +382,26 @@ public class Samus : MonoBehaviour {
         {
             vel.x = 0;
         }
-        //Enemy knockback
+        //Respawn
         if (respawn > 0)
         {
             rigid.velocity = new Vector3(0, 0, 0);
+            offPlatform();
             respawn--;
         }
+        //Enemy knockback
         if (hit)
         {
             rigid.velocity = knockback;
             hit = false;
+            offPlatform();
         } else if (invincibleTimer <= 0)
         {
+            if (isOnPlatform && platform.charged)
+            {
+                lastPlatformDir = platform.dir ? 1 : -1;
+                vel += new Vector3(lastPlatformDir * MovingPlatformAI.speed, 0f, 0f);
+            }
             rigid.velocity = vel;
             lastCollision = null;
         }
@@ -567,5 +587,18 @@ public class Samus : MonoBehaviour {
             onLava = false;
             respawn = 50f;
         }
+    }
+    
+    public void onPlatform(MovingPlatformAI target)
+    {
+        isOnPlatform = true;
+        platform = target;
+    }
+
+    void offPlatform()
+    {
+        isOnPlatform = false;
+        platform = null;
+        lastPlatformDir = 0;
     }
 }

@@ -7,8 +7,10 @@ public class MovingPlatformAI : MonoBehaviour
     public CapsuleCollider body;
     public Sprite poweredOn;
 
-    private bool charged = false;
-    private bool dir = true;
+    public static float speed = 3f;
+
+    public bool charged = false;
+    public bool dir = true;
     private RigidbodyConstraints moving = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
 
     // Use this for initialization
@@ -39,11 +41,16 @@ public class MovingPlatformAI : MonoBehaviour
             {
                 dir = !dir;
             }
-            rigid.velocity = new Vector3(dir ? 3f : -3f, 0f, 0f);
+            rigid.velocity = new Vector3(dir ? speed : -1 * speed, 0f, 0f);
         } else
         {
             rigid.velocity = new Vector3(0f, 0f, 0f);
             rigid.constraints = RigidbodyConstraints.FreezeAll;
+        }
+
+        if (Physics.Raycast(transform.position + new Vector3(-1.5f, .6f, 0f), Vector3.right, 3f, LayerMask.GetMask("Samus")))
+        {
+            Samus.S.onPlatform(this);
         }
     }
 
