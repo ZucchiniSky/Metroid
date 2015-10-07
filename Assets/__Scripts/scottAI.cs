@@ -22,6 +22,13 @@ public class scottAI : MonoBehaviour {
             || transform.position.y < j0 || transform.position.y > j1)
         {
             Destroy(gameObject);
+        } else if (transform.position.x < i0 + 10 || transform.position.x > i1 - 10
+            || transform.position.y < j0 + 10 || transform.position.y > j1 - 10)
+        {
+            rigid.constraints = RigidbodyConstraints.FreezeAll;
+        } else
+        {
+            rigid.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
         }
         if (transform.position.x == Mathf.Round(transform.position.x))
         {
