@@ -52,7 +52,10 @@ public class MovingPlatformAI : MonoBehaviour
         if (other.tag == "chargedShot")
         {
             charged = other.GetComponent<SamusBullet>().charge == 10;
-            GetComponent<SpriteRenderer>().sprite = poweredOn;
+            if (charged)
+            {
+                GetComponent<SpriteRenderer>().sprite = poweredOn;
+            }
         }
     }
 }
