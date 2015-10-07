@@ -27,8 +27,6 @@ public class Tile : MonoBehaviour {
         bc = GetComponent<BoxCollider>();
 
         sprend = GetComponent<SpriteRenderer>();
-        //Renderer rend = gameObject.GetComponent<Renderer>();
-        //mat = rend.material;
     }
 
     public void SetTile(int eX, int eY, int eTileNum = -1) {
@@ -58,7 +56,18 @@ public class Tile : MonoBehaviour {
 			{
 				SetCollider();
 				destructibility = ShowMapOnCamera.S.destructibleS[tileNum];
-			}
+
+                if ((destructibility >= '3' && destructibility <= '8') || (destructibility >= 'A' && destructibility <= 'F'))
+                {
+                    Tile[] doorTiles = getDoorTiles();
+                    foreach (Tile i in doorTiles)
+                    {
+                        if (i == null || i.gameObject == null) continue;
+                        i.gameObject.GetComponent<BoxCollider>().enabled = true;
+                        i.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                    }
+                }
+            }
 		} else
 		{
 			// this tile is used to spawn an enemy
@@ -88,66 +97,15 @@ public class Tile : MonoBehaviour {
             if ((destructibility >= '3' && destructibility <= '8') || (other.gameObject.tag == "Missile" && destructibility >= 'A' && destructibility <= 'F'))
             {
                 // this tile represents a door;
-                GameObject[] doorTiles = new GameObject[6];
-                if (destructibility == '3' || destructibility == 'A')
+                Tile[] doorTiles = getDoorTiles();
+                foreach (Tile i in doorTiles)
                 {
-                    doorTiles[0] = gameObject;
-                    doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y + 1].gameObject;
-                    doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 2].gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x + 3, y].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y + 1].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y + 2].gameObject;
-                }
-                else if (destructibility == '4' || destructibility == 'B')
-                {
-                    doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;
-                    doorTiles[1] = gameObject;
-                    doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 1].gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x + 3, y - 1].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y + 1].gameObject;
-                }
-                else if (destructibility == '5' || destructibility == 'C')
-                {
-                    doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 2].gameObject;
-                    doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;
-                    doorTiles[2] = gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x + 3, y - 2].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y - 1].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y].gameObject;
-                }
-                else if (destructibility == '6' || destructibility == 'D')
-                {
-                    doorTiles[0] = gameObject;
-                    doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y + 1].gameObject;
-                    doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 2].gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x - 3, y].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x - 3, y + 1].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x - 3, y + 2].gameObject;
-                } else if (destructibility == '7' || destructibility == 'E')
-                {
-                    doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;
-                    doorTiles[1] = gameObject;
-                    doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 1].gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x - 3, y - 1].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x - 3, y].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x - 3, y + 1].gameObject;
-                } else if (destructibility == '8' || destructibility == 'F')
-                {
-                    doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 2].gameObject;
-                    doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y - 1].gameObject;
-                    doorTiles[2] = gameObject;
-                    doorTiles[3] = ShowMapOnCamera.MAP_TILES[x - 3, y - 2].gameObject;
-                    doorTiles[4] = ShowMapOnCamera.MAP_TILES[x - 3, y - 1].gameObject;
-                    doorTiles[5] = ShowMapOnCamera.MAP_TILES[x - 3, y].gameObject;
-                }
-                foreach (GameObject i in doorTiles)
-                {
+                    if (i == null || i.gameObject == null) continue;
                     bool enable = true;
                     if (other.gameObject.tag == "Missile" && destructibility >= 'A' && destructibility <= 'F')
                     {
-                        --i.GetComponent<Tile>().missileDoorHp;
-                        if (i.GetComponent<Tile>().missileDoorHp == 0)
+                        --i.missileDoorHp;
+                        if (i.missileDoorHp == 0)
                         {
                             enable = false;
                         }
@@ -157,8 +115,8 @@ public class Tile : MonoBehaviour {
                     }
                     if (!enable)
                     {
-                        i.GetComponent<BoxCollider>().enabled = false;
-                        i.GetComponent<SpriteRenderer>().enabled = false;
+                        i.gameObject.GetComponent<BoxCollider>().enabled = false;
+                        i.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     }
                 }
             }
@@ -222,7 +180,67 @@ public class Tile : MonoBehaviour {
             break;
         }
 
-	}
+    }
+
+    Tile[] getDoorTiles()
+    {
+        Tile[] doorTiles = new Tile[6];
+        if (destructibility == '3' || destructibility == 'A')
+        {
+            doorTiles[0] = this;
+            doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y + 1];
+            doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 2];
+            doorTiles[3] = ShowMapOnCamera.MAP_TILES[x + 3, y];
+            doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y + 1];
+            doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y + 2];
+        }
+        else if (destructibility == '4' || destructibility == 'B')
+        {
+            doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 1];
+            doorTiles[1] = this;
+            doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 1];
+            doorTiles[3] = ShowMapOnCamera.MAP_TILES[x + 3, y - 1];
+            doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y];
+            doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y + 1];
+        }
+        else if (destructibility == '5' || destructibility == 'C')
+        {
+            doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 2];
+            doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y - 1];
+            doorTiles[2] = this;
+            doorTiles[3] = ShowMapOnCamera.MAP_TILES[x + 3, y - 2];
+            doorTiles[4] = ShowMapOnCamera.MAP_TILES[x + 3, y - 1];
+            doorTiles[5] = ShowMapOnCamera.MAP_TILES[x + 3, y];
+        }
+        else if (destructibility == '6' || destructibility == 'D')
+        {
+            doorTiles[0] = this;
+            doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y + 1];
+            doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 2];
+            doorTiles[3] = ShowMapOnCamera.MAP_TILES[x - 3, y];
+            doorTiles[4] = ShowMapOnCamera.MAP_TILES[x - 3, y + 1];
+            doorTiles[5] = ShowMapOnCamera.MAP_TILES[x - 3, y + 2];
+        }
+        else if (destructibility == '7' || destructibility == 'E')
+        {
+            doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 1];
+            doorTiles[1] = this;
+            doorTiles[2] = ShowMapOnCamera.MAP_TILES[x, y + 1];
+            doorTiles[3] = ShowMapOnCamera.MAP_TILES[x - 3, y - 1];
+            doorTiles[4] = ShowMapOnCamera.MAP_TILES[x - 3, y];
+            doorTiles[5] = ShowMapOnCamera.MAP_TILES[x - 3, y + 1];
+        }
+        else if (destructibility == '8' || destructibility == 'F')
+        {
+            doorTiles[0] = ShowMapOnCamera.MAP_TILES[x, y - 2];
+            doorTiles[1] = ShowMapOnCamera.MAP_TILES[x, y - 1];
+            doorTiles[2] = this;
+            doorTiles[3] = ShowMapOnCamera.MAP_TILES[x - 3, y - 2];
+            doorTiles[4] = ShowMapOnCamera.MAP_TILES[x - 3, y - 1];
+            doorTiles[5] = ShowMapOnCamera.MAP_TILES[x - 3, y];
+        }
+        return doorTiles;
+    }
 
 }
 

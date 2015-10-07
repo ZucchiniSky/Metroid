@@ -14,16 +14,16 @@ public class scottAI : MonoBehaviour {
 	void FixedUpdate () {
         int x = Mathf.RoundToInt(CameraScrolling.S.transform.position.x);
         int y = Mathf.RoundToInt(CameraScrolling.S.transform.position.y);
-        int i0 = x - 19;
-        int i1 = x + 19;
-        int j0 = y - 19;
-        int j1 = y + 19;
+        int i0 = x - 27;
+        int i1 = x + 27;
+        int j0 = y - 27;
+        int j1 = y + 27;
         if (transform.position.x < i0 || transform.position.x > i1
             || transform.position.y < j0 || transform.position.y > j1)
         {
             Destroy(gameObject);
-        } else if (transform.position.x < i0 + 10 || transform.position.x > i1 - 10
-            || transform.position.y < j0 + 10 || transform.position.y > j1 - 10)
+        } else if (transform.position.x < i0 + 11 || transform.position.x > i1 - 11
+            || transform.position.y < j0 + 11 || transform.position.y > j1 - 11)
         {
             rigid.constraints = RigidbodyConstraints.FreezeAll;
         } else
@@ -33,6 +33,12 @@ public class scottAI : MonoBehaviour {
         if (transform.position.x == Mathf.Round(transform.position.x))
         {
             transform.position = transform.position + new Vector3(-.05f, 0f, 0f);
+        }
+        if (Physics.Raycast(transform.position, Vector3.down, 1.5f, LayerMask.GetMask("Ground")) ||
+            Physics.Raycast(transform.position + new Vector3(-1.5f, 0f, 0f), Vector3.down, 1.5f, LayerMask.GetMask("Ground")) ||
+            Physics.Raycast(transform.position + new Vector3(1.5f, 0f, 0f), Vector3.down, 1.5f, LayerMask.GetMask("Ground")))
+        {
+            transform.position = new Vector3(transform.position.x, Mathf.Round(transform.position.y * 2f) / 2f);
         }
     }
 

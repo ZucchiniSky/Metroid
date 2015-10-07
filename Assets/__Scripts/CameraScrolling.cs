@@ -69,7 +69,7 @@ public class CameraScrolling : MonoBehaviour
                 }
                 break;
             case CameraState.VERTICAL:
-                position.y = poi.position.y;
+                position.y = poi.position.y + 1;
                 break;
             case CameraState.TRANSITION:
                 if (transitionX > transform.position.x)
