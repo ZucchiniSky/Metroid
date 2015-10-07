@@ -7,6 +7,8 @@ enemies:
 904 - ripper
 905 - reo
 906 - zeb
+907 - boulder
+908 - moving platform
 
 powerups:
 950 - morph ball
