@@ -49,7 +49,7 @@ public class MovingPlatformAI : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "chargedShot")
+        if (other.tag == "chargedShot" && !charged)
         {
             charged = other.GetComponent<SamusBullet>().charge == 10;
             if (charged)
