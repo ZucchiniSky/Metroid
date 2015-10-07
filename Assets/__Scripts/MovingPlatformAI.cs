@@ -5,6 +5,8 @@ public class MovingPlatformAI : MonoBehaviour
 {
     public Rigidbody rigid;
     public CapsuleCollider body;
+    public Sprite poweredOn;
+
     private bool charged = false;
     private bool dir = true;
     private RigidbodyConstraints moving = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
@@ -37,7 +39,7 @@ public class MovingPlatformAI : MonoBehaviour
             {
                 dir = !dir;
             }
-            rigid.velocity = new Vector3(3f, 0f, 0f);
+            rigid.velocity = new Vector3(dir ? 3f : -3f, 0f, 0f);
         } else
         {
             rigid.velocity = new Vector3(0f, 0f, 0f);
@@ -50,6 +52,7 @@ public class MovingPlatformAI : MonoBehaviour
         if (other.tag == "chargedShot")
         {
             charged = other.GetComponent<SamusBullet>().charge == 10;
+            GetComponent<SpriteRenderer>().sprite = poweredOn;
         }
     }
 }
