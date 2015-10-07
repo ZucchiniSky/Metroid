@@ -59,7 +59,7 @@ public class Samus : MonoBehaviour {
     private bool doorRight = false;
     private float doorX;
 
-    private float chargeConstant = .3f;
+    private float chargeConstant = .2f;
     
     public float respawn = 0f;
     static public Samus S;
@@ -194,20 +194,20 @@ public class Samus : MonoBehaviour {
             if (charge > 3)
             {
 
-                if ((int)(charge * 10) % 2 == 0)
+                if ((int)(charge/ chargeConstant) % 2 == 0)
                 {
                     spRend.color = Color.white;
                 }
                 else
                 {
-                    spRend.color = Color.blue;
+                    spRend.color = Color.cyan;
                 }
             }
         }
         else if(charge >= 10)
         {
             charge += chargeConstant;
-            if ((int)(charge * 10) % 2 == 0)
+            if ((int)(charge /chargeConstant) % 2 == 0)
             {
                 spRend.color = Color.white;
             }
